@@ -1,0 +1,454 @@
+#: :filename=/home/mvazquezg/.rbbt/tmp/9789965#:type=:double
+#MCLP TSV names	Protein	Genes	Status	Origin	Source	Catalog Number	Previously annotated	Modification	Correlation	Comment
+1433BETA	14-3-3-beta	YWHAB	Validated as ELISA	Rabbit	Santa Cruz	sc-628		
+1433EPSILON	14-3-3-epsilon	YWHAE	Use with Caution	Mouse	Santa Cruz	sc-23957		
+1433SIGMA								
+1433ZETA	14-3-3-zeta	YWHAZ	Validated as ELISA	Rabbit	Santa Cruz	sc-1019		
+4EBP1	4E-BP1	EIF4EBP1	Validated as ELISA	Rabbit	CST	9452		
+4EBP1_pS65	4E-BP1_pS65	EIF4EBP1	Validated as ELISA	Rabbit	CST	9456	-1	pS65	-1
+4EBP1_pT37T46	4E-BP1_pT37_T46	EIF4EBP1	Validated as ELISA	Rabbit	CST	9459	-1	pT37T46	-1	https://www.cellsignal.com/products/primary-antibodies/phospho-4e-bp1-thr37-46-antibody/9459	Translation by eIF4E inhibited when bound to 4EBP1
+4EBP1_pT70							-1	pT70	-1	https://www.cellsignal.com/products/primary-antibodies/phospho-4e-bp1-thr37-46-antibody/9459	Translation by eIF4E inhibited when bound to 4EBP1
+53BP1	53BP1	TP53BP1	Validated as ELISA	Rabbit	CST	4937	0	
+ACC1	ACC1	ACACA	Use with Caution	Rabbit	Abcam	ab45174	0	
+ACC_pS79	ACC_pS79	ACACA|ACACB	Validated as ELISA	Rabbit	CST	3661	-1	pS79	-1
+ACETYLATUBULINLYS40	Acetyl-a-Tubulin-Lys40	TUBA1B	Use with Caution	Rabbit	CST	5335		
+ACVRL1	ACVRL1	ACVRL1	Use with Caution	Rabbit	Abcam	ab108207	0	
+ADAR1	ADAR1	ADAR	Validated as ELISA	Mouse	Abcam	ab88574		
+AIB1								
+AKT	Akt	AKT1|AKT2|AKT3	Validated as ELISA	Rabbit	CST	4691	0	
+AKT_pS473	Akt_pS473	AKT1|AKT2|AKT3	Validated as ELISA	Rabbit	CST	9271	1	pS473	1
+AKT_pT308	Akt_pT308	AKT1|AKT2|AKT3	Validated as ELISA	Rabbit	CST	2965	1	pT308	1
+ALPHACATENIN	alpha-Catenin	CTNNA1	Validated as ELISA	Mouse	Calbiochem	CA1030		
+ALPHATUBULIN								
+AMPKALPHA	AMPK-alpha	PRKAA1	Use with Caution	Rabbit	CST	2532		
+AMPK_pT172	AMPK_pT172	PRKAA1	Validated as ELISA	Rabbit	CST	2535	1	pT172	1
+ANNEXIN1	Annexin-1	ANXA1	Use with Caution	Mouse	BD Transduction	610066	0	
+ANNEXINVII	Annexin-VII	ANXA7	Validated as ELISA	Mouse	BD Biosciences	610668		
+AR	AR	AR	Validated as ELISA	Rabbit	Abcam	ab52615	0	
+ARAF	A-Raf	ARAF	Validated as ELISA	Rabbit	CST	4432		
+ARAF_pS299	A-Raf_pS299	ARAF	Use with Caution	Rabbit	CST	4431	1	pS299	1
+ARID1A	ARID1A	ARID1A	Use with Caution	Rabbit	Sigma-Aldrich	HPA005456	0	
+ASNS	ASNS	ASNS	Validated as ELISA	Rabbit	Sigma	HPA029318		
+ATM	ATM	ATM	Validated as ELISA	Rabbit	CST	2873	0	
+ATM_pS1981	ATM_pS1981	ATM	Validated as ELISA	Rabbit	CST	5883		pS1981	1	https://www.cellsignal.com/products/primary-antibodies/phospho-atm-ser1981-d6h9-rabbit-mab/5883	"Activation of ATM by autophosphorylation on Ser1981 occurs in response to exposed DNA double stranded breaks."
+ATP5A	ATP5A	ATP5A	Use with Caution	Mouse	Abcam	ab14748		
+ATP5H	ATP5H	ATP5H	Use with Caution	Mouse	Abcam	ab110275		
+ATR	ATR	ATR	Use with Caution	Rabbit	CST	2790		
+ATRIP	ATRIP	ATRIP	Use with Caution	Rabbit	CST	2737		
+ATR_pS428	ATR_pS428	ATR	Use with Caution	Rabbit	Abcam	ab178407		pS428	1	http://www.abcam.com/atr-phospho-s428-antibody-epr2184-ab178407.html	"Phosphorylation of ATR at serine 428 in response to UV-induced DNA damage has been suggested as a means of activating ATR (4|5)" - https://www.cellsignal.com/products/primary-antibodies/phospho-atr-ser428-antibody/2853
+AURORAB	Aurora-B	AIM1	Validated as ELISA	Rabbit	CST	3094		
+AXL	Axl	AXL	Validated as ELISA	Rabbit	CST	8661		
+BACTI								
+BACTIN	b-Actin	ACTB	Use with Caution	Rabbit	CST	4970		
+BAD_pS112	Bad_pS112	BAD	Validated as ELISA	Rabbit	CST	9291	-1	pS112	-1
+BAK	Bak	BAK1	Use with Caution	Rabbit	Abcam	ab32371	0	
+BAP1	BAP1	BAP1	Validated as ELISA	Mouse	Santa Cruz	sc-28383		
+BAP1C4	Bap1-c-4	BAP1	Use with Caution	Rabbit	Alomine	APC-125		
+BAX	Bax	BAX	Validated as ELISA	Rabbit	CST	2772	0	
+BCATENIN_pT41S45	b-Catenin_pT41_S45	CTNNB1	Validated as ELISA	Rabbit	CST	9565		pT41S45	-1	https://www.cellsignal.com/products/primary-antibodies/phospho-b-catenin-thr41-ser45-antibody/9565	"CK1 phosphorylates β-catenin at Ser45. This phosphorylation event primes β-catenin for subsequent phosphorylation by GSK-3β (4-6). GSK-3β destabilizes β-catenin by phosphorylating it at Ser33|Ser37|and Thr41 (7). Mutations at these sites result in the stabilization of β-catenin protein levels and have been found in many tumor cell lines (8)." - https://www.cellsignal.com/products/primary-antibodies/phospho-b-catenin-thr41-ser45-antibody/9565	"S45 mutants of beta-catenin have been identified in colorectal and hepatocellular carcinomas|soft tissue cancer and Wilms Tumors|among others (reviewed in Polakis|2000). These mutations abolish the CK1alpha phosphorylation site of beta-catenin which acts as a critical priming site for GSK3 phosphorylation of T41( and subsequently S37 and S33) thus preventing its ubiquitin-mediated degradation " - http://www.reactome.org/content/detail/5358751
+BCL2	Bcl2	BCL2	Validated as ELISA	Mouse	Dako	M0887		
+BCL2A1	Bcl2A1	BCL2A1	Validated as ELISA	Rabbit	Abnova	PAB8528		
+BCL6								
+BCLXL	Bcl-xL	BCL2L1	Validated as ELISA	Rabbit	CST	2762	0	
+BCRYSTALLIN								
+BECLIN	Beclin	BECN1	Use with Caution	Goat	Santa Cruz	sc-10086	0	
+BETACATENIN	beta-Catenin	CTNNB1	Validated as ELISA	Rabbit	CST	9562	0	
+BETACATENIN_pS33	BETACATENIN_pS33	CTNNB1	Use with Caution	Rabbit	CST	9561		pS33	-1		"S33 mutations of beta-catenin interfere with GSK3 phosphorylation and result in stabilization and nuclear localization of the protein and enhanced WNT signaling (Groen et al|2008; Nhieu et al|1999; Clements et al|2002; reviewed in Polakis|2000). S33 mutations have been identified in cancers of the central nervous system|liver|endometrium and stomach|among others (reviewed in Polakis|2000)." - http://www.reactome.org/content/detail/R-HSA-5358747
+BETACATENIN_pS33S37T41	BETACATENIN_pS33S37T41	CTNNB1	Use with Caution	Rabbit	CST	9561		pS33S37T41	-1		"S33 mutations of beta-catenin interfere with GSK3 phosphorylation and result in stabilization and nuclear localization of the protein and enhanced WNT signaling (Groen et al|2008; Nhieu et al|1999; Clements et al|2002; reviewed in Polakis|2000). S33 mutations have been identified in cancers of the central nervous system|liver|endometrium and stomach|among others (reviewed in Polakis|2000)." - http://www.reactome.org/content/detail/R-HSA-5358747
+BID	Bid	BID	Use with Caution	Rabbit	Abcam	ab32060	0	
+BIM	Bim	BCL2L11	Validated as ELISA	Rabbit	Abcam	ab32158	0	
+BLIMP1								
+BLNK								
+BLNK_pY84								pY84	1		"Following BCR activation|phosphorylated on tyrosine residues by SYK and LYN. When phosphorylated|serves as a scaffold to assemble downstream targets of antigen activation|including PLCG1|VAV1|GRB2 and NCK1. Phosphorylation of Tyr-84|Tyr-178 and Tyr-189 facilitates PLCG1 binding. Phosphorylation of Tyr-96 facilitates BTK binding. Phosphorylation of Tyr-72 facilitates VAV1 and NCK1 binding. Phosphorylation is required for both Ca(2+) and MAPK signaling pathways." - http://www.abcam.com/blnk-phospho-y84-antibody-ab79320.html
+BLNK_pY96								pY96	1		"Following BCR activation|phosphorylated on tyrosine residues by SYK and LYN. When phosphorylated|serves as a scaffold to assemble downstream targets of antigen activation|including PLCG1|VAV1|GRB2 and NCK1. Phosphorylation of Tyr-84|Tyr-178 and Tyr-189 facilitates PLCG1 binding. Phosphorylation of Tyr-96 facilitates BTK binding. Phosphorylation of Tyr-72 facilitates VAV1 and NCK1 binding. Phosphorylation is required for both Ca(2+) and MAPK signaling pathways." - http://www.abcam.com/blnk-phospho-y84-antibody-ab79320.html
+BRAF								
+BRAF_pS445	B-Raf_pS445	BRAF	Validated as ELISA	Rabbit	CST	2696		pS445	-1
+BRCA1	BRCA1	BRCA1	Use with Caution	Rabbit	Millipore	07-434		
+BRCA2	BRCA2	BRCA2	Use with Caution	Rabbit	CST	9012		
+BRD4	BRD4	BRD4	Validated as ELISA	Rabbit	CST	13440		
+BRN2	BRN2	POU3F2	Use with Caution	N/A	in-house	N/A		
+CABL	c-Abl	ABL	Validated as ELISA	Rabbit	CST	2862		
+CABL_pT735								pT735	-1		"" - http://www.abcam.com/c-abl-phospho-t754-t735-antibody-ab138358.html
+CASEINKINASE								
+CASEINKINASEIALPHA								
+CASK								
+CASPASE3	Caspase-3	CASP3	Use with Caution	Rabbit	Abcam	ab32042		
+CASPASE3CLEAVED	CASPASE3CLEAVED	CASP3	Use with Caution	Rabbit	Abcam	ab32042			1
+CASPASE7CLEAVEDD198	Caspase-7_cleavedD198	CASP7	Use with Caution	Rabbit	CST	9491			1
+CASPASE8	Caspase-8	CASP8	**Used for QC**	Mouse	CST	9746		
+CASPASE9	Caspase-9	CASP9	Use with Caution	Rabbit	CST	9501		
+CASPASE9CLEAVED	Caspase-9-cleaved	CASP9	Use with Caution	Rabbit	CST	9501			1
+CAVEOLIN1	Caveolin-1	CAV1	Validated as ELISA	Rabbit	CST	3238	0	
+CAVEOLIN2								
+CD11								
+CD19								
+CD20	CD20	MS4A1	Use with Caution	Rabbit	Epitomics	1632		
+CD26	CD26	CD26	Validated as ELISA	Rabbit	Abcam	ab28340		
+CD29	CD29	ITGB1	Validated as ELISA	Mouse	BD Biosciences	610467		
+CD31	CD31	PECAM1	Validated as ELISA	Mouse	Dako	M0823	0	
+CD38								
+CD44	CD44	CD44	Use with Caution	Mouse	CST	3570		
+CD49B	CD49b	ITGA2	Validated as ELISA	Mouse	BD Biosciences	611016	0	
+CD55								
+CDK1	CDK1	CDK1	Use with Caution	Rabbit	Abcam	ab32384	0	
+CDK1_pY15	CDK1_pY15	CDK1	Use with Caution	Rabbit	CST	4539		pY15	-1		https://www.cellsignal.com/products/primary-antibodies/phospho-cdc2-tyr15-10a11-rabbit-mab/4539	"The entry of eukaryotic cells into mitosis is regulated by cdc2 kinase activation|a process controlled at several steps including cyclin binding and phosphorylation of cdc2 at Thr161 (1). However|the critical regulatory step in activating cdc2 during progression into mitosis appears to be dephosphorylation of cdc2 at Thr14 and Tyr15 (2). Phosphorylation at Thr14 and Tyr15|resulting in inhibition of cdc2|can be carried out by Wee1 and Myt1 protein kinases (3|4). The cdc25 phosphatase may be responsible for removal of phosphates at Thr14 and Tyr15 and subsequent activation of cdc2 (1|5)." - https://www.cellsignal.com/products/primary-antibodies/phospho-cdc2-tyr15-10a11-rabbit-mab/4539
+CDK4	CDK4	CDK4	Use with Caution	N/A	in-house	N/A		
+CHK1	Chk1	CHEK1	Use with Caution	Mouse	CST	2360	0	
+CHK1_pS296	Chk1_pS296	CHEK1	Validated as ELISA	Rabbit	Abcam	ab79758		pS296	1		http://www.abcam.com/chk1-phospho-s296-antibody-epr915-ab79758.html	"Chk1 kinase acts downstream of ATM/ATR kinase and plays an important role in DNA damage checkpoint control|embryonic development|and tumor suppression (1). Activation of Chk1 involves phosphorylation at Ser317 and Ser345 by ATM/ATR|followed by autophosphorylation of Ser296. " - https://www.cellsignal.com/products/primary-antibodies/phospho-chk1-ser296-antibody/2349
+CHK1_pS345	Chk1_pS345	CHEK1	Use with Caution	Rabbit	CST	2348	1	pS345	1			"Chk1 kinase acts downstream of ATM/ATR kinase and plays an important role in DNA damage checkpoint control|embryonic development|and tumor suppression (1). Activation of Chk1 involves phosphorylation at Ser317 and Ser345 by ATM/ATR|followed by autophosphorylation of Ser296. " - https://www.cellsignal.com/products/primary-antibodies/phospho-chk1-ser296-antibody/2349
+CHK2	Chk2	CHEK2	Validated as ELISA	Mouse	CST	3440	0	
+CHK2_pT68	Chk2_pT68	CHEK2	Use with Caution	Rabbit	CST	2197	1	pT68	1		https://www.cellsignal.com/products/primary-antibodies/phospho-chk2-thr68-c13c1-rabbit-mab/2197	"Chk2 is the mammalian orthologue of the budding yeast Rad53 and fission yeast Cds1 checkpoint kinases (1-3). The amino-terminal domain of Chk2 contains a series of seven serine or threonine residues (Ser19|Thr26|Ser28|Ser33|Ser35|Ser50|and Thr68) each followed by glutamine (SQ or TQ motif). These are known to be preferred sites for phosphorylation by ATM/ATR kinases (4|5). After DNA damage by ionizing radiation (IR)|UV irradiation|or hydroxyurea treatment|Thr68 and other sites in this region become phosphorylated by ATM/ATR (5-7). The SQ/TQ cluster domain|therefore|seems to have a regulatory function. Phosphorylation at Thr68 is a prerequisite for the subsequent activation step|which is attributable to autophosphorylation of Chk2 at residues Thr383 and Thr387 in the activation loop of the kinase domain" - https://www.cellsignal.com/products/primary-antibodies/phospho-chk2-thr68-c13c1-rabbit-mab/2197
+CHROMOGRANINANTERM	CHROMOGRANINANTERM	CHGA	Use with Caution	Rabbit	Epitomics	2349-1		
+CIAP	cIAP	BIRC2	Use with Caution	Rabbit	Millipore	07-759		
+CJUN	CJUN	JUN	Use with Caution	Rabbit	CST	9165		
+CJUN_pS73	c-Jun_pS73	JUN	Validated as ELISA	Rabbit	CST	9164	1	pS73	1
+CK5	CK5	KRT5	Use with Caution	N/A	Milipore	MAB1620		
+CKIT	c-Kit	KIT	Validated as ELISA	Rabbit	Abcam	ab32363	0	
+CKIT_pY703								pY703	1			"Phosphorylation at tyrosine 703 of c-Kit allows binding of Grb2 and activation of the Ras Raf ERK1&2 signaling pathway." - https://www.exalpha.com/products/detail/X2019P
+CLAUDIN7	Claudin-7	CLDN7	Validated as ELISA	Rabbit	Novus Biologicals	NB100-91714	0	
+CLIP115								
+CMET	c-Met	MET	**Used for QC**	Mouse	CST	3127		
+CMET_pY1235	c-Met_pY1235	MET	Validated as ELISA	Rabbit	CST	3129		pY1235
+CMYC	c-Myc	MYC	Use with Caution	Rabbit	Santa Cruz	sc-764	0		1
+CMYC_pT58	CMYC_pT58	MYC	Use with Caution	Rabbit	CST	9401		pT58			DISCONTINUED https://www.cellsignal.com/product/productDetail.jsp?productId=9401
+CMYC_pT58S62	CMYC_pT58S62	MYC	Use with Caution	Rabbit	CST	9401		pT58S62
+CO86								
+COFILIN								
+COFILIN_pS3	COFILIN_pS3	CFL1	Use with Caution	Rabbit	CST	3313		pS3
+COG3	COG3	COG3	Validated as ELISA	Rabbit	ProteinTech	11130-1-AP		
+COLLAGENVI	Collagen-VI	COL6A1	Validated as ELISA	Rabbit	Santa Cruz	sc-20649		
+COMPLEXIISUBUNIT	Complex-II-Subunit	SDHB	Validated as ELISA	Mouse	Invitrogen	459230		
+COMT	COMT	COMT	Use with Caution	Rabbit	Novus	16710002		
+CONNEXIN43	Connexin-43	CNST43	Use with Caution	Rabbit	CST	3512		
+COUPTFII	Coup-TFII	NR2F2	Use with Caution	Rabbit	CST	6434		
+COX2	Cox2	PTGS2	Use with Caution	Rabbit	CST	4842		
+COXIV	Cox-IV	PTGS3	Validated as ELISA	Rabbit	CST	4850		
+CRAF	C-Raf	RAF1	Use with Caution	Rabbit	Millipore	04-739	0	
+CRAF_pS338	C-Raf_pS338	RAF1	Validated as ELISA	Rabbit	CST	9427	1	pS338	1
+CREB	CREB	CREB1	Use with Caution	Rabbit	CST	9197		
+CREL								
+CRM1	CRM1	XPO1	Use with Caution	Rabbit	Santa Cruz	sc-5595		
+CTLA4	CTLA4	CTLA4	Use with Caution	Mouse	Sigma	SAB1403712		
+CULLIN2								
+CXCR4	CXCR4	CXCR4	Use with Caution	Rabbit	Abcam	ab2074		
+CYCLINA	CYCLINA	CCNA1	Use with Caution	Mouse/Rabbit	Santa Cruz	sc-239 or sc-751		
+CYCLINB1	Cyclin-B1	CCNB1	Validated as ELISA	Rabbit	Epitomics	1495-1		
+CYCLIND1	Cyclin-D1	CCND1	Validated as ELISA	Rabbit	Santa Cruz	sc-718		
+CYCLINE1	Cyclin-E1	CCNE1	Validated as ELISA	Mouse	Santa Cruz	sc-247		
+CYCLINE2	Cyclin_E2	CCNE2	Use with Caution	Rabbit	Epitomics	1142		
+CYCLINE4								
+CYCLOPHILINF	Cyclophilin-F	PPIF	Validated as ELISA	Mouse	Abcam	ab110324		
+CYTOKERATIN17	CYTOKERATIN17	KRT17	Use with Caution	Rabbit	Epitomics	1960		
+CYTOKERATIN18								
+CYTOKERATIN19	Cytokeratin-19	KRT19	Use with Caution	Mouse	Dako	M0888		
+CYTOKERATIN8								
+DETYROSINATEDALPHATUBULIN	DETYROSINATEDALPHATUBULIN	TUBA1A	Use with Caution	Rabbit	Abcam	ab48389		
+DIRAS3	DIRAS3	DIRAS3	Use with Caution	Mouse	Dr. Bast Lab	Customer made		
+DJ1	DJ1	PARK7	Validated as ELISA	Rabbit	Abcam	ab76008		
+DMHISTONEH3	DM-Histone-H3	HISTH3	Validated as ELISA	Rabbit	Millipore	07-030		
+DMK9HISTONEH3	DM-K9-Histone-H3	H3K9ME2	Use with Caution	Rabbit	Abcam	ab32521		
+DNATOPOISOMERASE2ALPHA								
+DNATOPOISOMERASE2BETA								
+DNMT1								
+DNMT3A								
+DUSP4	DUSP4	DUSP4	Validated as ELISA	Rabbit	CST	5149		
+DVL3	Dvl3	DVL3	Validated as ELISA	Rabbit	CST	3218	0	
+E2F1	E2F1	E2F1	Validated as ELISA	Mouse	Santa Cruz	sc-251		
+ECADHERIN	E-Cadherin	CDH1	Validated as ELISA	Rabbit	CST	3195	0	
+EEF2								
+EEF2K	eEF2	EEF2	Use with Caution	Rabbit	CST	2332	0	
+EGFR	eEF2K	EEF2K	Validated as ELISA	Rabbit	CST	3692	0	
+EGFR_pY1068	EGFR	EGFR	Validated as ELISA	Rabbit	CST	2232	0	pY1068
+EGFR_pY1173	EGFR_pY1068	EGFR	Use with Caution (also sees pHer2)	Rabbit	CST	2234	1	pY1173	1
+EGFR_pY992	EGFR_pY1173	EGFR	Validated as ELISA	Rabbit	Abcam	ab32578	1	pY992	1
+EGR1								
+EGR2								
+EIF2A_pS51	EIF2A_pS51	EIF2A	Use with Caution	Rabbit	CST	9721		pS51	-1	https://www.cellsignal.com/products/primary-antibodies/phospho-eif2a-ser51-antibody/9721	"Phosphorylation of the eukaryotic initiation factor 2 (eIF2) α subunit is a well-documented mechanism to downregulate protein synthesis under a variety of stress conditions" - https://www.cellsignal.com/products/primary-antibodies/phospho-eif2a-ser51-antibody/9721
+EIF4E	eIF4E	EIF4E	Validated as ELISA	Rabbit	CST	9742	0	
+EIF4G	eIF4G	EIF4G1	Use with Caution	Rabbit	CST	2498	0	
+EIF4G1_pS1108								pS1108		?
+EIG121	EIG121	KIAA1324	Use with Caution	Unknown	SDI	Unknown		
+ELK1_pS383	Elk1_pS383	ELK1	Use with Caution	Rabbit	CST	9181		pS383
+ENOS_pS1177								pS1177
+ENY2	ENY2	ENY2	Use with Caution	Mouse	GeneTex	GTX629542		
+EPHA2_pT594	EPHA2_pT594	EPHA2	Use with Caution	Rabbit	Cell Applications	CB 4368		pT594
+EPPK1	EPPK1	EPPK1	Use with Caution	Mouse	Biosciences	556347		
+ER	ER	ESR1	Validated as ELISA	Rabbit	Lab Vision	RM-9101		
+ERALPHA	ER-alpha	ESR1	Validated as ELISA	Rabbit	Lab Vision	RM-9101-S	0	
+ERALPHA_pS118	ER-alpha_pS118	ESR1	Validated as ELISA	Rabbit	Epitomics	1091-1		pS118
+ERCC1	ERCC1	ERCC1	Validated as ELISA	Mouse	Santa Cruz	sc-17809		
+ERCC5	ERCC5	ERCC5	Use with Caution	Rabbit	ProteinTech	11331-1-AP		
+ERG123								
+ERK2	ERK2	MAPK1	Use with Caution	Rabbit	Santa Cruz	sc-154		
+ER_pS167	ER_pS167	ESR1	Use with Caution	Rabbit	CST	2514		pS167
+ETS1	Ets-1	ETS1	Validated as ELISA	Rabbit	Bethyl	A303-501A	0	
+ETV6								
+EZH2	EZH2	EZH2	Use with Caution	Rabbit	CST	4905		
+EZRIN_pY353								pY353
+FAK	FAK	PTK2	Use with Caution	Rabbit	Abcam	ab40794		
+FAK_pY397	FAK_pY397	PTK2	Validated as ELISA	Rabbit	CST	3283		pY397
+FAK_pY925								pY925
+FAS								
+FASN	FASN	FASN	Validated as ELISA	Rabbit	CST	3180	0	
+FIBRONECTIN	Fibronectin	FN1	Validated as ELISA	Rabbit	Epitomics	1574-1	0	
+FLT3FLK2	FLT3FLK2	FLT3	Use with Caution	Rabbit	Santa Cruz	sc-480		
+FOXM1	FoxM1	FOXM1	Validated as ELISA	Rabbit	CST	5436	0	
+FOXO3A	FoxO3a	FOXO3	Use with Caution	Rabbit	CST	2497	0	
+FOXO3A_pS318S321	FoxO3a_pS318_S321	FOXO3	Use with Caution	Rabbit	CST	9465	-1	pS318S321	-1
+FRA1	FRA-1	FRA1	Use with Caution	Rabbit	Santa Cruz	sc-605		
+G6PD	G6PD	G6PD	Validated as ELISA	Rabbit	CST	8866	0	
+GAB2	Gab2	GAB2	Validated as ELISA	Rabbit	CST	3239	0	
+GAB2_pY452								pY452
+GAPDH	GAPDH	GAPDH	Use with Caution	Mouse	Life Technologies	AM4300	0	
+GATA2	GATA2	GATA2	Use with Caution	Mouse	Sigma	WH000262M1		
+GATA3	GATA3	GATA3	Validated as ELISA	Mouse	BD Biosciences	558686	0	
+GATA6	GATA6	GATA6	Use with Caution	Rabbit	CST	4253		
+GCN5L2	GCN5L2	KAT2A	Validated as ELISA	Rabbit	CST	3305		
+GLUTAMINASE	Glutaminase	GLS	Use with Caution	Rabbit	Abcam	ab156876		
+GPBB	GPBB	PYGB	Validated as ELISA	Rabbit	Novus Biologicals	NBP1-32799		
+GPR82								
+GSK3ALPHABETA	GSK3-alpha-beta	GSK3A|GSK3B	Validated as ELISA	Mouse	Santa Cruz	SC-7291	0	
+GSK3ALPHABETA_pS21S9	GSK3-alpha-beta_pS21_S9	GSK3A|GSK3B	Validated as ELISA	Rabbit	CST	9331		pS21S9	-1
+GSK3_pS9	GSK3_pS9	GSK3A|GSK3B	Validated as ELISA	Rabbit	CST	9336		pS9	-1
+GYS	Gys	GYS1	Validated as ELISA	Rabbit	CST	3886		
+GYS_pS641	Gys_pS641	GYS1	Validated as ELISA	Rabbit	CST	3891		pS641
+H2AX_pS139	H2AX_pS139	H2AX	Validated as ELISA	Rabbit	Pierce Biotechnology	LF-PA0025		pS139
+H2AX_pS140	H2AX_pS140	H2AX	Use with Caution	Mouse	Pierce Biotechnology	MA1-2022		pS140
+HER2	HER2	ERBB2	Validated as ELISA	Mouse	Lab Vision	MS-325-P1	0	
+HER2_pY1248	HER2_pY1248	ERBB2	Use with Caution (likely sees pEGFR)	Rabbit	R&D Systems	AF1768	1	pY1248	1
+HER3	HER3	ERBB3	Validated as ELISA	Rabbit	Santa Cruz	sc-285	0	
+HER3_pY1289	HER3_pY1289	ERBB3	Use with Caution	Rabbit	CST	4791	1	pY1289	1
+HEREGULIN	Heregulin	NRG1	Validated as ELISA	Rabbit	CST	2573	0	
+HEXOKINASEII	Hexokinase-II	HK2	Validated as ELISA	Rabbit	CST	2867		
+HIAP	HIAP	BIRC2	Use with Caution	Rabbit	Millipore	07-759		
+HIF1ALPHA	Hif-1-alpha	HIF1A	Use with Caution	Mouse	BD Biosciences	610958		
+HISTONEH2AX_pS139								pS139
+HISTONEH3	Histone-H3	H3F3A|H3F3B	Validated as ELISA	Rabbit	Abcam	ab1791		
+HISTONEH3_pS10								pS10
+HLAE	HLAE	HLA-E	Use with Caution	Mouse	Santa Cruz	sc-51624		
+HSP27	HSP27	HSP27	Use with Caution	Mouse	CST	2402		
+HSP27_pS82	HSP27_pS82	HSBP1	Validated as ELISA	Rabbit	CST	2401		pS82
+HSP70	HSP70	HSP70	Use with Caution	Rabbit	CST	4872	0	
+HYDIN	HYDIN	HYDIN	Use with Caution	Rabbit	Abcam	ab185083		
+ID2								
+ID3								
+IGF1R_pY1135Y1136	IGF1R_pY1135_Y1136	IGF1R	Validated as ELISA	Rabbit	CST	3024		pY1135Y1136	1	https://www.cellsignal.com/products/primary-antibodies/phospho-igf-i-receptor-b-tyr1135-1136-insulin-receptor-b-tyr1150-1151-19h7-rabbit-mab/3024	"Three tyrosine residues within the kinase domain (Tyr1131|Tyr1135|and Tyr1136) are the earliest major autophosphorylation sites (4). Phosphorylation of these three tyrosine residues is necessary for kinase activation (5|6)." - https://www.cellsignal.com/products/primary-antibodies/phospho-igf-i-receptor-b-tyr1135-1136-insulin-receptor-b-tyr1150-1151-19h7-rabbit-mab/3024
+IGFBP2	IGFBP2	IGFBP2	Validated as ELISA	Rabbit	CST	3922	0	
+IGFBP5	IGFBP5	IGFBP5	Use with Caution	Goat	Santa Cruz	sc-6006		
+IGFRB	IGFRb	INSR	Use with Caution	Rabbit	CST	3027		
+INPP4B	INPP4b	INPP4B	Validated as ELISA	Rabbit	CST	4039	0	
+IRF1	IRF-1	IRF1	Use with Caution	Rabbit	Santa Cruz	sc-497		
+IRF4								
+IRS1	IRS1	IRS1	Validated as ELISA	Rabbit	Millipore	06-248	0	
+IRS1_pS307	IRS1_pS307	IRS1	Use with Caution	Rabbit	Millipore	07-247		pS307			http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0059725
+JAB1	JAB1	COPS5	Use with Caution	Mouse	Santa Cruz	sc-13157	0	
+JAGGED1	Jagged1	JAG1	Validated as ELISA	Rabbit	Abcam	ab109536		
+JAK1								
+JAK2	Jak2	JAK2	Validated as ELISA	Rabbit	CST	3230		
+JNK2	JNK2	MAPK9	Use with Caution	Rabbit	CST	4672	0	
+JNK_pT183PY185	JNK_pT183_pY185	MAPK8	Validated as ELISA	Rabbit	CST	4668		pT183PY185	1	https://www.cellsignal.com/products/primary-antibodies/phospho-sapk-jnk-thr183-tyr185-81e11-rabbit-mab/4668	"Multiple sequence alignment of the human|mouse and chicken JNK2 proteins by ClustalW showed that Thr183 and Tyr185 residues|that are responsible for the JNK activation in human|are identical for all three orthologs." - http://www.reactome.org/content/detail/R-GGA-438005
+JUNB								
+KEAP1	KEAP1	KEAP1	Use with Caution	Rabbit	CST	4617		
+KI67								
+KRAS	KRAS	KRAS	Use with Caution	Rabbit	Epitomics	1819		
+KU80	Ku80	XRCC5	Use with Caution	Rabbit	CST	2180		
+LAT								
+LAT_pY191								pY191
+LCK	Lck	LCK	Validated as ELISA	Rabbit	CST	2752	0	
+LCN2A	LCN2A	LCN2	Use with Caution	Goat	R & D	AF1757		
+LDHA	LDHA	LDHA	Use with Caution	Rabbit	CST	3582		
+LKB1	LKB1	STK11	Use with Caution	Mouse	Abcam	ab15095		
+LKB1_pS428								pS428	1		"Recent evidence suggests that phosphorylation at Ser428 by PKCζ influences the ability of LKB1 to bind and phosphorylate AMPK at Thr172 (8) as well as regulate apoptosis through PTEN signaling pathway suppression of Akt (9)." - https://www.cellsignal.com/products/primary-antibodies/phospho-lkb1-ser428-c67a3-rabbit-mab/3482
+MACC1	MACC1	MACC1	Use with Caution	N/A	in-house	N/A		
+MAPK_pT202Y204	MAPK_pT202_Y204	MAPK1|MAPK3	Validated as ELISA	Rabbit	CST	4377	1	pT202Y204	1
+MCL1	Mcl-1	MCL1	Validated as ELISA	Rabbit	CST	5453		
+MDM2	MDM2	MDM2	Use with Caution	Rabbit	Abcam	ab38618		
+MDM2_pS166	MDM2_pS166	MDM2	Validated as ELISA	Rabbit	CST	3521		pS166	1	https://www.cellsignal.com/products/primary-antibodies/phospho-mdm2-ser166-antibody/3521	"MDM2|a ubiquitin ligase for p53|plays a central role in regulation of the stability of p53 (1). Akt-mediated phosphorylation of MDM2 at Ser166 and Ser186 increases its interaction with p300|allowing MDM2-mediated ubiquitination and degradation of p53 (2-4). Phosphorylation of MDM2 also blocks its binding to p19ARF|increasing the degradation of p53 (3)" - https://www.cellsignal.com/products/primary-antibodies/phospho-mdm2-ser166-antibody/3521
+MEK1	MEK1	MAP2K1	Validated as ELISA	Rabbit	Epitomics	1235-1	0	
+MEK1_pS217S221	MEK1_pS217_S221	MAP2K1|MAP2K2	Validated as ELISA	Rabbit	CST	9154	1	pS217S221	1
+MEK2	MEK2	MAP2K2	Validated as ELISA	Rabbit	CST	9125		
+MERLIN	Merlin	NF2	Use with Caution	Rabbit	Novus Biologicals	22710002		
+MGMT	MGMT	MGMT	Use with Caution	Mouse	Abcam	ab3144		
+MIF	MIF	MIF	Use with Caution	Rabbit	Santa Cruz	sc-20121		
+MIG6	MIG6	ERRFI1	Validated as ELISA	Mouse	Sigma-Aldrich	WH0054206M1		
+MITOCHONDRIA	Mitochondria	MTCO2	Validated as ELISA	Mouse	Abcam	ab3298		
+MME	MME	MME	Use with Caution	Mouse	Santa Cruz	sc-52994		
+MMP2	MMP2	MMP2	Validated as ELISA	Rabbit	CST	4022		
+MRE11	Mre11	MRE11A	Use with Caution	Rabbit	CST	4847		
+MSH2	MSH2	MSH2	Validated as ELISA	Mouse	CST	2850	0	
+MSH6	MSH6	MSH6	Use with Caution	Rabbit	Novus Biologicals	22030002	0	
+MT1F	MT1F	MT1F	Use with Caution	N/A	in-house	N/A		
+MTOR	mTOR	MTOR	Validated as ELISA	Rabbit	CST	2983	0	
+MTOR_pS2448	mTOR_pS2448	MTOR	Use with Caution	Rabbit	CST	2971	1	pS2448	1
+MYH11	MYH11	MYH11	Validated as ELISA	Rabbit	SDI / Novus	21370002	0	
+MYOSIN11	Myosin-11	MYH11	Validated as ELISA	Rabbit	Novus Biologicals	21370002		
+MYOSINIIA	Myosin-IIa	MYH9	Use with Caution	Rabbit	CST	3403		
+MYOSINIIA_pS1943	Myosin-IIa_pS1943	MYH9	Validated as ELISA	Rabbit	CST	5026	1	pS1943	1
+NAPSINA	NAPSIN-A	NAPSA	Use with Caution	Rabbit	Abcam	ab129189		
+NCADHERIN	N-Cadherin	CDH2	Validated as ELISA	Rabbit	CST	4061	0	
+NDRG1_pT346	NDRG1_pT346	NDRG1	Validated as ELISA	Rabbit	CST	3217	1	pT346	1
+NDUFB4	NDUFB4	NDUFB4	Validated as ELISA	Mouse	Abcam	ab110243		
+NEUROPILIN1								
+NF2	NF2	NF2	Use with Caution	Rabbit	SDI	2271.00.02	0	
+NFKBP65_pS536	NF-kB-p65_pS536	RELA	Use with Caution	Rabbit	CST	3033	1	pS536	1
+NOTCH1	Notch1	NOTCH1	Validated as ELISA	Rabbit	CST	3268	0	
+NOTCH3	Notch3	NOTCH3	Use with Caution	Rabbit	Santa Cruz	sc-5593		
+NRAS	N-Ras	NRAS	Validated as ELISA	Mouse	Santa Cruz	sc-31	0	
+NRF2	NRF2	NFE2L2	Use with Caution	Rabbit	CST	12721		
+NUR77								
+P16INK4A	p16INK4a	CDKN2A	Validated as ELISA	Rabbit	Abcam	ab81278				http://www.abcam.com/cdkn2ap16ink4a-antibody-ep435y-129r-ab81278.html
+P21	p21	CDKN1A	Validated as ELISA	Rabbit	Santa Cruz	sc-397	0	
+P27	p27	CDKN1B	Validated as ELISA	Rabbit	Epitomics	1591-1		
+P27KIP1	p27-Kip-1	CDKN1B	Validated as ELISA	Rabbit	Abcam	ab32034		
+P27_pT157	p27_pT157	CDKN1B	Use with Caution	Rabbit	R&D Systems	AF1555	-1	pT157	-1
+P27_pT198	p27_pT198	CDKN1B	Validated as ELISA	Rabbit	Abcam	ab64949	-1	pT198	-1
+P38	p38	MAPK14	Validated as ELISA	Rabbit	CST	9212		
+P38ALPHA	p38-alpha	MAPK14	Validated as ELISA	Mouse	CST	9228		
+P38MAPK	p38_MAPK	MAPK14	Validated as ELISA	Rabbit	CST	9212		
+P38_pT180Y182	p38_pT180_Y182	MAPK14	Validated as ELISA	Rabbit	CST	9211	1	pT180Y182	1
+P53	p53	TP53	Use with Caution	Rabbit	CST	9282	0	
+P62LCKLIGAND	p62-Lck-ligand	SQSTM1	Use with Caution	Mouse	BD Transduction Lab	610833		
+P63	P63	TP63	Use with Caution	Rabbit	Abcam	ab53039		
+P70S6K	p70S6K	RPS6KB1	Validated as ELISA	Rabbit	Epitomics	1494-1		
+P70S6K_pS371	P70S6K_pS371	RPS6KB1	Use with Caution	N/A	CST	9208		pS371		https://www.cellsignal.com/products/primary-antibodies/phospho-p70-s6-kinase-ser371-antibody/9208
+P70S6K_pT389	p70-S6K_pT389	RPS6KB1	Validated as ELISA	Rabbit	CST	9205		pT389	1
+P90RSK	p90RSK	RPS6KA1	Use with Caution	Rabbit	CST	9347		
+P90RSK_pS221	P90RSK_pS221	RPS6KA1	Use with Caution	N/A	in-house	N/A		pS221
+P90RSK_pT359S363	p90RSK_pT359_S363	RPS6KA1	Use with Caution	Rabbit	CST	9344		pT359S363	1	https://www.cellsignal.com/products/primary-antibodies/phospho-p90rsk-thr359-ser363-antibody/9344	" Several sites both within and outside of the RSK kinase domain|including Ser380|Thr359|Ser363|and Thr573|are important for kinase activation (3)." - https://www.cellsignal.com/products/primary-antibodies/phospho-p90rsk-thr359-ser363-antibody/9344
+P90RSK_pT573	p90RSK_pT573	RPS6K	Use with Caution	Rabbit	CST	9346		pT573	1
+PAI1	PAI-1	SERPINE1	Validated as ELISA	Mouse	BD Biosciences	612024	0	
+PAR	PAR	PAR	Use with Caution	Rabbit	Trevigen	4336-BPC-100		
+PARP1	PARP1	PARP1	Validated as ELISA	Rabbit	Santa Cruz	sc-7150		
+PARPAB3	PARPAB3	PARP1	Use with Caution	Rabbit	Santa Cruz	sc-7150		
+PARPCLEAVED	PARP-cleaved	PARP1	**Used for QC**	Mouse	CST	9546		
+PAX2	PAX2	PAX2	Use with Caution	Rabbit	Abcam	ab38738		
+PAX5								
+PAXILLIN	Paxillin	PXN	Use with Caution	Rabbit	Epitomics	1500-1	0	
+PCADHERIN	P-Cadherin	CDH3	Use with Caution	Rabbit	CST	2130	0	
+PCNA	PCNA	PCNA	Use with Caution	Mouse	CST	2586	0	
+PDCD1	PDCD1	PDCD1	Use with Caution	Rabbit	CST	15120		
+PDCD1L1	Pdcd-1L1	CD274	Use with Caution	Goat	Santa Cruz	sc-19090		
+PDCD4	Pdcd4	PDCD4	Use with Caution	Rabbit	Rockland	600-401-965	0	
+PDCD5	PDCD5	PDCD5	Use with Caution	Rabbit	Protein Tech Inc	12456-1-AP		
+PDGFRB	PDGFR-b	PDGFRB	Validated as ELISA	Rabbit	CST	3169		
+PDK1	PDK1	PDPK1	Validated as ELISA	Rabbit	CST	3062	0	
+PDK1_pS241	PDK1_pS241	PDPK1	Validated as ELISA	Rabbit	CST	3061	1	pS241	1
+PDL1	PD-L1	CD274	Use with Caution	Rabbit	CST	13684		
+PEA15	PEA-15	PEA15	Validated as ELISA	Rabbit	CST	2780	0	
+PEA15_pS116	PEA-15_pS116	PEA15	Validated as ELISA	Rabbit	Invitrogen	44-836G		pS116
+PI3KP110ALPHA	PI3K-p110-alpha	PIK3CA	Use with Caution	Rabbit	CST	4255	0	
+PI3KP110B	PI3K-p110-b	PIK3CB	Use with Caution	Mouse	Santa Cruz	sc-376412		
+PI3KP85	PI3K-p85	PIK3R1	Validated as ELISA	Rabbit	Millipore	06-195	0	
+PKCALPHA	PKC-alpha	PRKCA	Validated as ELISA	Mouse	Millipore	05-154	0	
+PKCALPHA_pS657	PKC-alpha_pS657	PRKCA	Use with Caution	Rabbit	Millipore	06-822		pS657	-1	DISCONTINUED https://www.labome.com/product/EMD-Millipore/06-822.html	"This phosphorylation is necessary for the autophosphorylation of threonine 638 in the carboxy-terminus of PKC alpha|a step that is critical for regulating the rate of PKC alpha dephosphorylation and inactivation." - https://www.labome.com/product/EMD-Millipore/06-822.html
+PKCDELTA_pS664	PKC-delta_pS664	PRKCD	Validated as ELISA	Rabbit	Millipore	07-875	1	pS664	1
+PKCDELTA_pT507	
+PKCPANBETAII_pS660	PKC-pan_BetaII_pS660	PRKCB	Validated as ELISA	Rabbit	CST	9371		pT507	1	https://www.cellsignal.com/products/primary-antibodies/phospho-pkc-pan-bii-ser660-antibody/9371	"Control of PKC activity is regulated through three distinct phosphorylation events. Phosphorylation occurs in vivo at Thr500 in the activation loop|at Thr641 through autophosphorylation|and at the carboxy-terminal hydrophobic site Ser660 (2)." - https://www.cellsignal.com/products/primary-antibodies/phospho-pkc-pan-bii-ser660-antibody/9371
+PKM2	PKM2	PKM2	Use with Caution	Rabbit	CST	4053		pS660
+PLCGAMMA1								
+PLCGAMMA1_pY783								pY783
+PLCGAMMA2								
+PLCGAMMA2_pY1217								pY1217
+PLCGAMMA2_pY759	PLC-gamma2_pY759	PLCG2	Use with Caution	Rabbit	CST	3874		pY759
+PLK1	PLK1	PLK1	Use with Caution	Rabbit	CST	4513		
+PLK1_pT210								pT210
+PLK4	PLK4	PLK4	Use with Caution	Rabbit	USC	Customer made		
+PORI								
+PORIN	Porin	VDAC1	Validated as ELISA	Mouse	Abcam	ab14734		
+PR	PR	PGR	Validated as ELISA	Rabbit	Abcam	ab32085	0	
+PRAS40	PRAS40	AKT1S1	Use with Caution	Mouse	Invitrogen	AHO1031		
+PRAS40_pT246	PRAS40_pT246	AKT1S1	Validated as ELISA	Rabbit	Life Technologies	441100G	-1	pT246	-1
+PRDX1	PRDX1	PRDX1	Use with Caution	Rabbit	Sigma/Atlas	HPA007730		
+PREX1	PREX1	PREX1	Validated as ELISA	Rabbit	Abcam	ab102739	0	
+PTEN	PTEN	PTEN	Validated as ELISA	Rabbit	CST	9552	0	
+PUMA	Puma	BBC3	Use with Caution	Rabbit	CST	4976		
+PYGM	PYGM	PYGM	Use with Caution	Mouse	Novus Biologicals	H00005837-M10		
+PYK2_pY402								pY402
+RAB11	Rab11	RAB11A|B	Use with Caution	Rabbit	CST	3539	0	
+RAB25	Rab25	RAB25	Validated as ELISA	Rabbit	CST	4314		
+RAD50	Rad50	RAD50	Validated as ELISA	Mouse	Millipore	05-525	0	
+RAD51	Rad51	RAD51	Validated as ELISA	Rabbit	CST	8875	0	
+RAPTOR	Raptor	RPTOR	Validated as ELISA	Rabbit	CST	2280	0	
+RB	Rb	RB1	**Used for QC**	Mouse	CST	9309		
+RBM15	RBM15	RBM15	Validated as ELISA	Rabbit	Novus Biologicals	21390002	0	
+RB_pS807S811	Rb_pS807_S811	RB1	Validated as ELISA	Rabbit	CST	9308	-1	pS807S811	-1
+RET_pY905	RET_pY905	RET	Use with Caution	Rabbit	CST	3221		pY905
+RHEB	Rheb	RHEB	Use with Caution	Mouse	R&D Systems	MAB3426		
+RICTOR	Rictor	RICTOR	Use with Caution	Rabbit	CST	2114	0	
+RICTOR_pT1135	Rictor_pT1135	RICTOR	Validated as ELISA	Rabbit	CST	3806	-1	pT1135	-1
+ROCK1	Rock-1	ROCK1	Use with Caution	Rabbit	Santa Cruz	sc-5560		
+RPA32	RPA32	RPA32	Use with Caution	Rat	CST	2208		
+RSK	RSK	RPS6KA1 RPS6KA2 RPS6KA3	Use with Caution	Rabbit	CST	9347		
+S6	S6	RPS6	Validated as ELISA	Mouse	CST	2317		
+S6_pS235S236	S6_pS235_S236	RPS6	Validated as ELISA	Rabbit	CST	2211	1	pS235S236	1
+S6_pS240S244	S6_pS240_S244	RPS6	Validated as ELISA	Rabbit	CST	2215	1	pS240S244	1
+SCD	SCD	SCD	Validated as ELISA	Mouse	Santa Cruz	sc-58420		
+SDHA	SDHA	SDHA	Validated as ELISA	Rabbit	CST	11998		
+SETD2	SETD2	SETD2	**Used for QC**	Rabbit	Abcam	ab69836		
+SF2	SF2	SRSF1	Validated as ELISA	Mouse	Invitrogen	32-4500	0	
+SGK	SGK	SGK1	Use with Caution	Rabbit	CST	3272		
+SGK_pS78	SGK_pS78	SGK1	Use with Caution	Rabbit	CST	3271		pS78
+SHC_pY317	Shc_pY317	SHC1	Validated as ELISA	Rabbit	CST	2431	1	pY317	1
+SHP2_pY542	SHP-2_pY542	PTPN11	Use with Caution	Rabbit	CST	3751		pY542	1	https://www.cellsignal.com/products/primary-antibodies/phospho-shp-2-tyr542-antibody/3751	"SHP-2 becomes phosphorylated at Tyr542 and Tyr580 in its carboxy-terminus in response to growth factor receptor activation (4). These phosphorylation events are thought to relieve basal inhibition and stimulate SHP-2 tyrosine phosphatase activity (5)" - https://www.cellsignal.com/products/primary-antibodies/phospho-shp-2-tyr542-antibody/3751
+SLC1A5	SLC1A5	SLC1A5	Use with Caution	Rabbit	Sigma-Aldrich	HPA035240		
+SMAC	Smac	DIABLO	**Used for QC**	Mouse	CST	2954		
+SMAD1	Smad1	SMAD1	Validated as ELISA	Rabbit	Abcam	ab33902	0	
+SMAD3	Smad3	SMAD3	Validated as ELISA	Rabbit	Abcam	ab40854	0	
+SMAD3_pS423	SMAD3_pS423	SMAD3	Use with Caution	N/A	Epitomics	1880		pS423	1		"Following stimulation by TGF-β|Smad2 and Smad3 become phosphorylated at carboxyl terminal serine residues (Ser465 and 467 on Smad2; Ser423 and 425 on Smad3) by TGF-β Receptor I. Phosphorylated Smad 2/3 can complex with Smad4 and translocate to the nucleus to regulate gene expression (9-11)." - https://www.cellsignal.com/products/primary-antibodies/phospho-smad3-ser423-425-c25a9-rabbit-mab/9520
+SMAD4	Smad4	SMAD4	Validated as ELISA	Mouse	Santa Cruz	sc-7966	0	
+SMAD6								
+SNAIL	Snail	SNAI1	**Used for QC**	Mouse	CST	3895		
+SNF5	SNF5	SMARCB1	Use with Caution	Rabbit	CST	8745		
+SOD2	SOD2	SOD2	Validated as ELISA	Rabbit	CST	13141		
+SPIB								
+SRC	Src	SRC	Validated as ELISA	Mouse	Millipore	05-184	0	
+SRC_pY416	Src_pY416	SRC|LYN|FYN|LCK|YES1|HCK	Validated as ELISA	Rabbit	CST	2101	1	pY416	1
+SRC_pY527	Src_pY527	SRC|YES1|FYN|FGR	Validated as ELISA	Rabbit	CST	2105	-1	pY527	-1
+STAT1_pY701	STAT1_pY701	STAT1	Use with Caution	Rabbit	CST	9171		pY701	1	DISCONTINUED https://www.cellsignal.com/product/productDetail.jsp?productId=9171	"The Stat1 transcription factor is activated in response to a large number of ligands (1) and is essential for responsiveness to IFN-α and IFN-γ (2|3). Phosphorylation of Stat1 at Tyr701 induces Stat1 dimerization|nuclear translocation|and DNA binding (4)." - https://www.cellsignal.com/product/productDetail.jsp?productId=9171
+STAT3	Stat3	STAT3	Use with Caution	Rabbit	CST	4904		
+STAT3_pY705	Stat3_pY705	STAT3	Validated as ELISA	Rabbit	CST	9131	1	pY705	1
+STAT5ALPHA	STAT5-alpha	STAT5A	Validated as ELISA	Rabbit	Epitomics	1289-1	0	
+STAT5_pY694	STAT5_pY694	STAT5A	Use with Caution	N/A	in-house	N/A		pY694
+STAT6_pY641	STAT6_pY641	STAT6	Use with Caution	Rabbit	CST	9361		pY641
+STATHMIN	Stathmin	STMN1	Validated as ELISA	Rabbit	Epitomics	1972-1		
+SURVIVIN								
+SYK	Syk	SYK	Validated as ELISA	Mouse	Santa Cruz	sc-1240	0	
+SYK_pY323								pY323
+SYK_pY352								pY352
+SYK_pY525Y526								pY525Y526
+SYNAPTOPHYSIN	SYNAPTOPHYSIN	SYP	Use with Caution	Rabbit	Abcam-Epitomics	1485-1		
+TAU	Tau	TAU	Use with Caution	Mouse	Millipore	05-348		
+TAZ	TAZ	TAZ	Validated as ELISA	Rabbit	CST	4883	0	
+TAZ_pS79	TAZ_pS79	WWTR1	Use with Caution	Rabbit	Santa Cruz	sc-17610		pS79
+TCF4	TELOMERASE	TERT	Use with Caution	Rabbit	Novus	17060002		
+TELOMERASE	TFAM	TFAM	Validated as ELISA	Rabbit	CST	7495		
+TFAM	TFRC	TFRC	Validated as ELISA	Rabbit	Novus Biologicals	22500002	0	
+TFRC	THYMIDILATESYNTHASE	TYMS	Use with Caution	Mouse	Abcam	ab3145		
+THYMIDILATESYNTHASE								
+TIF1ALPHA								
+TIGAR	TIGAR	C12ORF5	Validated as ELISA	Rabbit	Abcam	ab137573	0	
+TRAF1								
+TRANSGLUTAMINASE	Transglutaminase	TGM2	Validated as ELISA	Mouse	Lab Vision	MS-224-P1	0	
+TSC1	TSC1	TSC1	Use with Caution	Rabbit	CST	4906	0	
+TTF1	TTF1	NKX2-1	Validated as ELISA	Rabbit	Abcam	ab76013		
+TUBERIN	Tuberin	TSC2	Validated as ELISA	Rabbit	Abcam	ab32554	0	
+TUBERIN_pT1462	Tuberin_pT1462	TSC2	Validated as ELISA	Rabbit	CST	3617	-1	pT1462	-1
+TWIST	TWIST	TWIST2	Use with Caution	Mouse	Santa Cruz	sc-81417		
+TYRO3	Tyro3	TYRO3	Validated as ELISA	Rabbit	CST	5585		
+UBAC1	UBAC1	UBAC1	Validated as ELISA	Rabbit	Sigma-Aldrich	HPA005651		
+UGT1A	UGT1A	UGT1A1	Validated as ELISA	Mouse	Santa Cruz	sc-271268		
+UQCRC2	UQCRC2	UQCRC2	Use with Caution	Mouse	Abcam	ab14745		
+VASP	VASP	VASP	Validated as ELISA	Rabbit	CST	3112		
+VEGFR2	VEGFR-2	KDR	Validated as ELISA	Rabbit	CST	2479		
+VIMENTI	Vimentin	VIM	Use with Caution	Mouse	Dako	M0725		
+VIMENTIN								
+XBP1	XBP1	XBP1	Use with Caution	Goat	Santa Cruz	sc-32136	0	
+XIAP	XIAP	XIAP	Use with Caution	Rabbit	CST	2042		
+XPA	XPA	XPA	Validated as ELISA	Mouse	Santa Cruz	sc-56813		
+XPF	XPF	XPF	Use with Caution	Mouse	Abcam	ab3299		
+XRCC1	XRCC1	XRCC1	Use with Caution	Rabbit	CST	2735	0	
+YAP	YAP	YAP1	Use with Caution	Rabbit	Santa Cruz	sc-15407	0	
+YAP_pS127	YAP_pS127	YAP1	Use with Caution	Rabbit	CST	4911	-1	pS127	-1
+YB1	YB1	YBX1	Validated as ELISA	Rabbit	Novus Biologicals	17250002		
+YB1_pS102	YB1_pS102	YBX1	Validated as ELISA	Rabbit	CST	2900		pS102
+ZNF342	ZNF342	ZNF296	Use with Caution	Rabbit	Abcam	ab51265		

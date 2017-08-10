@@ -1,0 +1,109 @@
+- if job 
+  .job_control
+    = workflow_partial('job_result/job_control', workflow, task, locals)
+
+- ac = ActionCard.new do 
+  - input :genes, :string, "Coma separated list of genes"
+  - input :activations, :select, "Activations", "paradigm", :select_options => %w(paradigm viper literature)
+  - input :pathway, :select, "Pathway", "CASCADE", :select_options => %w(CASCADE EXT)
+
+=  action_card_render ac do
+  - genes ||= "CTNNB1"
+  - activations ||= "paradigm"
+  - pathway ||= "CASCADE"
+  - genes = genes.split(/,\s*/)
+
+  :ruby
+    Workflow.require_workflow "CLSS"
+    Workflow.require_workflow "SINTEF"
+    require 'rbbt/sources/CASCADE'
+    require 'rbbt/sources/signor'
+    require 'rbbt/rest/graph'
+
+    cl = job.recursive_inputs[:cell_line]
+    ssp = job.load
+
+    
+    v = job.step(:profile).load.transpose("Associated Gene Name")
+    vcl = v.fields.select{|f| f.split("_").first.downcase.gsub(/[^\w]/,'') == cl.downcase.gsub(/[^\w]/,'')}
+    v = v.column(vcl)
+    v.fields = ["Viper"]
+    st_pathway = job.recursive_inputs[:st_pathway]
+    st_tf_pathway = job.step(:st_tf_pathway).load
+
+
+    l = SINTEF::DATA_DIR.Example["steadystate_AGS_for_barbara_topo.tab"].tsv :type => :single, :cast => :to_i
+
+    ssp.key_field = "Associated Gene Name"
+    l.key_field = "Associated Gene Name"
+    l.fields = ["Literature"]
+
+    l.process l.fields.first do |_v|
+      _v == 0 ? -1 : _v
+    end
+    ssp.process ssp.fields.first do |_v|
+      _v == 0 ? -1 : _v
+    end
+    v.process v.fields.first do |_v|
+      _v == 0 ? -1 : _v
+    end
+
+
+  - nodes = []
+  - associations = []
+  - association_type = {}
+  - p = pathway == 'CASCADE' ? st_pathway : st_tf_pathway
+  - p.split("\n").each do |line|
+    - parts = line.split("\t")
+    - next unless (parts & genes).any?
+    - case parts.length
+    - when 2
+      - nodes << parts.last
+    - when 3
+      - nodes << parts[0]
+      - nodes << parts[1]
+      - key = [parts[0], parts[1]] * "~"
+      - associations << key
+      - association_type[key] = parts[2]
+
+  - a = case activations 
+    - when 'paradigm' 
+      -ssp
+    - when 'viper'
+      -v
+    - when 'literature'
+      - l
+
+  - graph = RbbtGraph.new
+  - graph.add_entities nodes.uniq, "Associated Gene Name"
+  - graph.add_associations associations
+  - graph.add_aesthetic :node, {:aes => :color, :mapper => "sign-gradient", :name => :code, :mapper_obj => a}
+  - graph.add_rule :edge, {:name => :type, :map => :code, :mapper_obj => association_type}
+  - graph.add_aesthetic :edge, {:aes => :color, :mapper => :map, :name => :type, :mapper_obj => {"-a>" => :green, "-a|" => :red}}
+
+  :sass
+    .action_parameters
+      width: auto !important
+      position: absolute !important
+      top: 0 !important
+      right: 0 !important
+      z-index: 100
+      
+    #plot
+      height: 800px
+      width: 100%
+      background-color: white
+  #plot
+
+  :deferjs
+    var plot = $('#plot')
+    var graph_model = #{graph.js_model.to_json}
+    rbbt.plots.graph.view_cytoscapejs(graph_model, plot)
+
+  - model = {}
+  - model[:entities] = associations
+
+
+  = table do
+    - ssp.attach(v).attach(l)
+

@@ -1,0 +1,34 @@
+CLSS=/$PWD filter="*.rb *.rake Rakefile *.rdoc *.R *.sh *.js *.haml *.sass *.txt *.conf" {
+ workflow.rb
+ bin=bin filter="*"{
+ }
+ lib=lib {
+  .keep
+  rbbt=rbbt{
+   rest=rest{
+    graph.rb
+   }
+   tasks=tasks{
+    paradigm.rb
+    ROMA.rb
+   }
+  }
+ }
+ test=test {
+  test_helper.rb
+ }
+ data=data filter="*"{
+ }
+ www=www{
+  views=views{
+   main=main{
+    BC.haml
+   }
+   CLSS=CLSS{
+    steady_states_paradigm=steady_states_paradigm{
+     job_result.haml
+    }
+   }
+  }
+ }
+}

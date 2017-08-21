@@ -55,7 +55,7 @@
   - p = pathway == 'CASCADE' ? st_pathway : st_tf_pathway
   - p.split("\n").each do |line|
     - parts = line.split("\t")
-    - next unless (parts & genes).any?
+    - next unless genes.empty? or (parts & genes).any?
     - case parts.length
     - when 2
       - nodes << parts.last

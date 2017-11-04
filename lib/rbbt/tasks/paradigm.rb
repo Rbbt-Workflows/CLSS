@@ -1,6 +1,7 @@
 Workflow.require_workflow "Paradigm"
 Workflow.require_workflow "FNL"
 Workflow.require_workflow "Viper"
+Workflow.require_workflow "ROMA"
 
 module CLSS
 
@@ -77,10 +78,30 @@ module CLSS
 
   dep :regulon_modules
   dep Viper, :profile, :data => CCLE.gene_expression, :modules => :regulon_modules
-  task :ccle_tf_activity => :tsv do |cell_line|
+  task :ccle_tf_activity_Viper => :tsv do |cell_line|
     TSV.get_stream(step(:profile))
   end
 
+  dep :regulon_modules
+  dep ROMA, :profile, :data => CCLE.gene_expression, :modules => :regulon_modules
+  task :ccle_tf_activity_ROMA => :tsv do |cell_line|
+    TSV.get_stream(step(:profile))
+  end
+
+  input :tf_inference_method, :select, "Select inference method", "ROMA", :select_options => %w(Viper ROMA)
+  dep do |jobname, options|
+    case options[:tf_inference_method].to_s
+    when "Viper"
+      {:task => :ccle_tf_activity_Viper, :workflow => CLSS, :inputs => options, :jobname => jobname}
+    when "ROMA"
+      {:task => :ccle_tf_activity_ROMA, :workflow => CLSS, :inputs => options, :jobname => jobname}
+    else
+      raise ParameterException, "Unknown method: " << options[:tf_inference_method].inspect
+    end
+  end
+  task :ccle_tf_activity => :tsv do |tf_inference_method|
+    TSV.get_stream dependencies.first
+  end
 
   dep :activity
   dep :ccle_tf_activity, :jobname => "Default"

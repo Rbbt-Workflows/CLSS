@@ -88,7 +88,7 @@ module CLSS
     TSV.get_stream(step(:profile))
   end
 
-  input :tf_inference_method, :select, "Select inference method", "ROMA", :select_options => %w(Viper ROMA)
+  input :tf_inference_method, :select, "Select inference method", "Viper", :select_options => %w(Viper ROMA)
   dep do |jobname, options|
     case options[:tf_inference_method].to_s
     when "Viper"

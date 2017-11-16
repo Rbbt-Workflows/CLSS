@@ -70,21 +70,21 @@ module CLSS
     end
   end
 
-  dep :regulon_modules
+  dep :regulon_modules, :compute => :produce
   dep Viper, :profile, :data => GDSC.gene_expression, :modules => :regulon_modules
-  task :gdsc_tf_activity => :tsv do |cell_line|
+  task :gdsc_tf_activity => :tsv do 
     TSV.get_stream(step(:profile))
   end
 
   dep :regulon_modules
   dep Viper, :profile, :data => CCLE.gene_expression, :modules => :regulon_modules
-  task :ccle_tf_activity_Viper => :tsv do |cell_line|
+  task :ccle_tf_activity_Viper => :tsv do
     TSV.get_stream(step(:profile))
   end
 
   dep :regulon_modules
   dep ROMA, :profile, :data => CCLE.gene_expression, :modules => :regulon_modules
-  task :ccle_tf_activity_ROMA => :tsv do |cell_line|
+  task :ccle_tf_activity_ROMA => :tsv do
     TSV.get_stream(step(:profile))
   end
 

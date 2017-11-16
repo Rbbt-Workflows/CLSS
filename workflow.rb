@@ -11,6 +11,7 @@ Misc.add_libdir if __FILE__ == $0
 
 Workflow.require_workflow "CCLE"
 Workflow.require_workflow "GDSC"
+Workflow.require_workflow "Achilles"
 
 module CLSS
   extend Workflow
@@ -27,6 +28,11 @@ module CLSS
       tsv.key_field = "id"
       tsv
     end
+  end
+
+  helper :achilles_cell_line do |cell_line|
+    require 'rbbt/ner/rnorm'
+    Normalizer.new(Achilles.cell_line_info.tsv.keys).resolve(cell_line, nil, :max_candidates => 100, :threshold => -100).first
   end
 
   helper :ccle_cell_line do |cell_line|
@@ -104,6 +110,16 @@ module CLSS
     activity[cell_line] = activity[mclp_cl]
     activity.delete mclp_cl unless mclp_cl == cell_line
     activity
+  end
+
+  input :cell_line, :string, "Cell line name"
+  input :ceres_threshold, :float, "Threshold for selection of essential genes from Achilles", -0.8
+  task :achilles_essential_genes => :array do |cell_line,thr|
+    acl = achilles_cell_line(cell_line)
+    raise ParameterException, "Cell line not found" << cell_line if acl.nil?
+
+    data = Achilles.ceres_gene_effects.tsv :fields => [acl], :type => :single, :cast => :to_f
+    data.select{|k,value| value < thr }.keys
   end
 
 

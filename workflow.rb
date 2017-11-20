@@ -116,7 +116,7 @@ module CLSS
   input :ceres_threshold, :float, "Threshold for selection of essential genes from Achilles", -0.8
   task :achilles_essential_genes => :array do |cell_line,thr|
     acl = achilles_cell_line(cell_line)
-    raise ParameterException, "Cell line not found" << cell_line if acl.nil?
+    raise ParameterException, "Cell line not found: " << cell_line if acl.nil?
 
     data = Achilles.ceres_gene_effects.tsv :fields => [acl], :type => :single, :cast => :to_f
     data.select{|k,value| value < thr }.keys

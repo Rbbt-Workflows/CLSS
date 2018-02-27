@@ -150,4 +150,29 @@ module CLSS
     dumper
   end
 
+  dep :genome
+  dep :mRNA
+  dep :st_tf_pathway
+  dep Paradigm, :analysis, :genome => :genome, :mRNA => :mRNA, :activity => nil, :disc => [-0.3, 0.3], :pathway => :st_tf_pathway
+  task :steady_states_paradigm_expr => :tsv do
+    dumper = TSV::Dumper.new :key_field => "Gene", :fields => %w(Activity), :type => :single
+    dumper.init
+    TSV.traverse step(:analysis), :into => dumper, :type => :array do |line|
+      next if line =~ /^>/
+      elem, value = line.split("\t")
+      value = value.to_f
+      activity = case
+                 when value == 0
+                   "-"
+                 when value < 0
+                   "0"
+                 when value > 0
+                   "1"
+                 end
+
+      [elem, activity] 
+    end
+    dumper
+  end
+
 end

@@ -6,7 +6,7 @@ module CLSS
     tsv = TSV.open(RbbtMatrix.new(CCLE.gene_expression.find).to_average.data_file, :fields => ccle_cls)
     tsv.R <<-EOF
 rbbt.require('progeny')
-pathways = progeny(as.matrix(data), scale=FALSE)
+pathways = progeny(as.matrix(data), scale=TRUE)
 data = pathways
 
     EOF

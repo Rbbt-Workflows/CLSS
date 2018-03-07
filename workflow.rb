@@ -228,6 +228,7 @@ module CLSS
   end
 end
 
+require 'rbbt/tasks/expression'
 require 'rbbt/tasks/paradigm'
 
 #require 'CLSS/tasks/basic.rb'

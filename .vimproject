@@ -9,6 +9,7 @@ CLSS=/$PWD filter="*.rb *.rake Rakefile *.rdoc *.R *.sh *.js *.haml *.sass *.txt
     graph.rb
    }
    tasks=tasks{
+    expression.rb
     paradigm.rb
     ROMA.rb
    }

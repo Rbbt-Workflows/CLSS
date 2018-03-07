@@ -1,7 +1,7 @@
 module CLSS
 
   input :cell_lines, :array, "Cell line names", %w(AGS SW620 DU145 Colo205 UACC62 SF295 A498 MDA-MB-468)
-  input :dataset, :select, "Expression dataset", 'CCLE', %w(CCLE GDSC)
+  input :dataset, :select, "Expression dataset", 'CCLE', :select_options => %w(CCLE GDSC)
   task :progeny => :tsv do |cell_lines,dataset|
     tsv = nil
     if dataset == "CCLE"

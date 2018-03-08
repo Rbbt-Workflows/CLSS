@@ -32,7 +32,7 @@ module CLSS
 
   helper :achilles_cell_line do |cell_line|
     require 'rbbt/ner/rnorm'
-    Normalizer.new(Achilles.cell_line_info.tsv.keys).resolve(cell_line, nil, :max_candidates => 100, :threshold => -100).first
+    Normalizer.new(Achilles.cell_line_info.tsv.keys).resolve(cell_line, nil, :max_candidates => 100, :threshold => -1000).first
   end
 
   helper :ccle_cell_line do |cell_line|

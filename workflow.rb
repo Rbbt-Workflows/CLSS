@@ -55,6 +55,13 @@ module CLSS
     GDSC.cell_line_equivalences.index(:target => "COSMIC cell line ID")[cell_line]
   end
 
+  helper :coread_cell_line do |cell_line|
+    require 'rbbt/ner/rnorm'
+    require 'rbbt/sources/COREAD_phospho_proteome'
+    cell_lines = COREADPhosphoProteome.phosphosite_levels.tsv.fields
+    Normalizer.new(cell_lines).resolve(cell_line, nil, :max_candidates => 100, :threshold => -100).first
+  end
+
   input :cell_line, :string, "Cell line name"
   task :mRNA => :tsv do |cell_line|
     ccle_cl = ccle_cell_line(cell_line)
@@ -230,6 +237,7 @@ end
 
 require 'rbbt/tasks/expression'
 require 'rbbt/tasks/paradigm'
+require 'rbbt/tasks/COREAD'
 
 #require 'CLSS/tasks/basic.rb'
 

@@ -24,7 +24,8 @@ module CLSS
         v_s = Misc.std_num_vector(v, -1, 1)
         v.replace(v_s.collect{|e| e.nan? ? nil : e })
       end
-      tsv = tsv.transpose.select(sample)
+      raise ParameterException, "#{ sample } field not found in matrix" unless tsv.fields.include? sample
+      tsv = tsv.slice(sample).transpose
       tsv.key_field = "id"
       tsv
     end
@@ -37,12 +38,12 @@ module CLSS
 
   helper :ccle_cell_line do |cell_line|
     require 'rbbt/ner/rnorm'
-    Normalizer.new(CCLE.cell_lines).resolve(cell_line, nil, :max_candidates => 100, :threshold => -100).first
+    Normalizer.new(CCLE.cell_lines, :use_keys => true).resolve(cell_line, nil, :max_candidates => 100, :threshold => -100).first
   end
 
   helper :gdsc_cell_line do |cell_line|
     require 'rbbt/ner/rnorm'
-    Normalizer.new(GDSC.cell_lines).resolve(cell_line, nil, :max_candidates => 100, :threshold => -100).first
+    Normalizer.new(GDSC.cell_lines, :use_keys => true).resolve(cell_line, nil, :max_candidates => 100, :threshold => -100).first
   end
 
   helper :mclp_cell_line do |cell_line|
@@ -70,7 +71,7 @@ module CLSS
     tsv = matrix_activity(CCLE.gene_expression.find, ccle_cl)
     current = tsv.keys.first
     tsv[cell_line] = tsv[current]
-    tsv.delete(current)
+    tsv.delete(current) unless current == cell_line
     tsv.key_field = "id"
     tsv
   end
@@ -81,10 +82,17 @@ module CLSS
     raise ParameterException, "Cell line not found: " << cell_line if ccle_cl.nil?
     log :cell_line, "Using cell_line #{ccle_cl} (#{cell_line})"
 
-    tsv = CCLE.gene_CNV.tsv(:type => :list, :fields => [ccle_cl]).change_key("Associated Gene Name", :identifiers  => Organism.identifiers(CCLE.organism)).transpose
+
+    tsv = begin
+            CCLE.gene_CNV.tsv(:type => :list, :fields => [ccle_cl]).change_key("Associated Gene Name", :identifiers  => Organism.identifiers(CCLE.organism)).transpose
+          rescue
+            raise ParameterException, "Cell line has no CNV data: " << cell_line 
+          end
+
     current = tsv.keys.first
+
     tsv[cell_line] = tsv[current]
-    tsv.delete(current)
+    tsv.delete(current) unless current == cell_line
     tsv.key_field = "id"
     tsv
   end

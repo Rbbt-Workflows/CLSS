@@ -19,9 +19,11 @@ module CLSS
 
     signor.column(coread_cl).each do |site, effect|
       gene = site.split(":").first
+      effect = "0" if effect.to_s == "-1"
       tsv[gene] ||= []
       tsv[gene] << effect
     end
+
     tsv
   end
 
@@ -39,7 +41,7 @@ module CLSS
         nil
       elsif para_v.flatten == coread.flatten.uniq
         "MATCH"
-      elsif coread.flatten.include? para_v
+      elsif coread.flatten.include? para_v.first
         "PARTIAL"
       else
         "NO"
@@ -51,6 +53,43 @@ module CLSS
     set_info :matches, Misc.counts(values)
 
     para
+  end
+
+  dep :compare_coread_paradigm, :cell_line => :placeholder, :compute => [:bootstrap, 3, :canfail] do |jobname, options|
+    COREADPhosphoProteome.phosphosite_levels.fields.collect do |cell_line|
+      {:inputs => options.merge(:cell_line => cell_line), :jobname => cell_line}
+    end
+  end
+  task :compare_coread_paradigm_all => :tsv do
+    good = dependencies.select{|dep| dep.done? }
+    tsv = nil
+    good.each do |dep|
+      cell_line = dep.recursive_inputs[:cell_line]
+      new = dep.load.slice("Match")
+      new.fields = [cell_line]
+      if tsv.nil?
+        tsv = new
+      else
+        tsv.attach new
+      end
+    end
+    tsv
+  end
+
+  dep :compare_coread_paradigm_all
+  task :paradigm_plot => :tsv do
+    good = rec_dependencies.select{|dep| dep.task_name.to_s == "steady_states_paradigm" && dep.done?}
+    good.each do |dep|
+      cell_line = dep.recursive_inputs[:cell_line]
+      new = dep.load
+      new.fields = [cell_line]
+      if tsv.nil?
+        tsv = new
+      else
+        tsv.attach new
+      end
+    end
+    tsv
   end
 
 end

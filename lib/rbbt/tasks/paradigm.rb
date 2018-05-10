@@ -175,4 +175,75 @@ module CLSS
     dumper
   end
 
+  dep :steady_states_paradigm_expr, :cell_line => :placeholder, :compute => [:bootstrap, 3, :canfail] do |jobname, options|
+    CCLE.cell_lines.keys.collect do |cell_line|
+      {:jobname => cell_line, :inputs => options.merge(:cell_line => cell_line)}
+    end
+  end
+  task :all_steady_states => :tsv do
+    tsv = nil
+    dependencies.each do |dep|
+      next if dep.error?
+      cell_line = dep.recursive_inputs[:cell_line]
+      this = dep.load
+      this.fields = [cell_line]
+      if tsv.nil?
+        tsv = this
+      else
+        tsv.attach this
+      end
+    end
+    tsv
+  end
+
+  dep :ccle_tf_activity_Viper, :cell_line => :placeholder, :compute => [:bootstrap, 3, :canfail] do |jobname, options|
+    CCLE.cell_lines.keys.collect do |cell_line|
+      {:jobname => cell_line, :inputs => options.merge(:cell_line => cell_line)}
+    end
+  end
+  task :all_viper_profiles => :tsv do
+    tsv = nil
+    dependencies.each do |dep|
+      next if dep.error?
+      cell_line = dep.recursive_inputs[:cell_line]
+      this = dep.load
+      this.fields = [cell_line]
+      if tsv.nil?
+        tsv = this
+      else
+        tsv.attach this
+      end
+    end
+    tsv
+  end
+  dep :steady_states_paradigm_expr, :cell_line => :placeholder, :compute => [:bootstrap, 3, :canfail] do |jobname, options|
+    require 'rbbt/sources/COREAD_phospho_proteome'
+    require 'rbbt/ner/rnorm'
+    cell_lines = COREADPhosphoProteome.phosphosite_levels.fields
+    norm = Normalizer.new(CCLE.cell_lines, :use_keys => true)
+    cell_lines.collect do |cell_line|
+      begin
+        ccle_cl = norm.resolve(cell_line, nil, :max_candidates => 100, :threshold => -100).first
+        {:jobname => ccle_cl, :inputs => options.merge(:cell_line => ccle_cl)}
+      rescue
+        Log.exception $!
+      end
+    end.compact
+  end
+  task :CRC_steady_states => :tsv do
+    tsv = nil
+    dependencies.each do |dep|
+      next if dep.error?
+      cell_line = dep.recursive_inputs[:cell_line]
+      this = dep.load
+      this.fields = [cell_line]
+      if tsv.nil?
+        tsv = this
+      else
+        tsv.attach this
+      end
+    end
+    tsv
+  end
+
 end

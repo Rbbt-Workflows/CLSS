@@ -1,0 +1,691 @@
+protein	ACVR1
+protein	AKT1
+protein	AKT2
+protein	AKT3
+protein	AKT1S1
+protein	JUN
+protein	FOS
+protein	ATF2
+protein	SMAD3
+protein	SMAD4
+protein	ARHGAP24
+protein	AXIN1
+protein	BAD
+protein	BAX
+protein	BCL2
+protein	BMPR2
+protein	BTRC
+protein	CASP3
+protein	CASP8
+protein	CASP9
+protein	CREBBP
+protein	EP300
+protein	CCND1
+protein	CDC42
+protein	CDKN1A
+protein	CFL1
+protein	CFL2
+protein	CFLAR
+protein	CHUK
+protein	CSNK1A1
+protein	CSNK1D
+protein	CSNK1E
+protein	CREB1
+protein	CSK
+protein	CTBBV1
+protein	CYCS
+protein	DAAM1
+protein	DKK1
+protein	DKK2
+protein	DKK3
+protein	DKK4
+protein	DUSP1
+protein	DUSP6
+protein	DVL1
+protein	DVL2
+protein	DVL3
+protein	EGR1
+protein	MAPK3
+protein	MAPK1
+protein	FOXO1
+protein	FOXO3
+protein	FOXO4
+protein	FZD1
+protein	FZD2
+protein	FZD3
+protein	FZD4
+protein	FZD5
+protein	FZD6
+protein	FZD7
+protein	FZD8
+protein	FZD9
+protein	FZD10
+protein	GAB1
+protein	GAB2
+protein	GRAP2
+protein	CRB2
+protein	GSK3A
+protein	GSK3B
+protein	IKBKB
+protein	ILK
+protein	LIFR
+protein	IL6ST
+protein	IL6R
+protein	IRAK1
+protein	IRS1
+protein	STAT1
+protein	STAT2
+protein	ITCH
+protein	JAK1
+protein	JAK2
+protein	MAPK8
+protein	MAPK9
+protein	KRAS
+protein	LEF1
+protein	LIF
+protein	LIMK1
+protein	LIMK2
+protein	LRP5
+protein	LRP6
+protein	MAP2K3
+protein	MAP2K4
+protein	MAP2K7
+protein	MAP3K11
+protein	MAP3K4
+protein	MAP3K5
+protein	MAP3K7
+protein	MAP3K8
+protein	MAPK14
+protein	MAPK8IP3
+protein	MAPKAPK2
+protein	MDM2
+protein	MAP2K1
+protein	MAP2K2
+protein	MMP2
+protein	MMP7
+protein	MMP9
+protein	RPS6KA4
+protein	RPS6KA5
+protein	MTOR
+protein	RPTOR
+protein	MLST8
+protein	RICTOR
+protein	MYC
+protein	NFKB1
+protein	NFKB2
+protein	NLK
+protein	PAK1
+protein	PARD6A
+protein	PDPK1
+protein	PIAS1
+protein	PIK3CA
+protein	PLCG1
+protein	PLK1
+protein	PPM1A
+protein	PPP1CA
+protein	PRKACA
+protein	PRKCA
+protein	PRKCD
+protein	PTEN
+protein	PTPN11
+protein	PTPN6
+protein	RAC1
+protein	RAC2
+protein	RAC3
+protein	ARAF
+protein	BRAF
+protein	RAF1
+protein	RELA
+protein	RELB
+protein	REL
+protein	RHEB
+protein	RHOA
+protein	RND3
+protein	ROCK1
+protein	RPS6
+protein	RPS6KA1
+protein	RPS6KA2
+protein	RPS6KA3
+protein	EGFR
+protein	ERBB2
+protein	ERBB3
+protein	ERBB4
+protein	IGF1R
+protein	PDGFRA
+protein	PDGFRB
+protein	CSF1R
+protein	KIT
+protein	FLT3
+protein	FGFR1
+protein	FGFR2
+protein	FGFR3
+protein	FGFR4
+protein	FLT1
+protein	FLT4
+protein	KDR
+protein	MET
+protein	RPS6KB1
+protein	RPS6KB2
+protein	SFRP1
+protein	SHC1
+protein	SKI
+protein	SKP2
+protein	SMAD1
+protein	SMAD2
+protein	SMAD5
+protein	SMAD6
+protein	SMAD7
+protein	SMURF1
+protein	SMURF2
+protein	SOCS1
+protein	SOS1
+protein	SRC
+protein	SRF
+protein	STAT3
+protein	SYK
+protein	TAB1
+protein	TAB2
+protein	TCF7
+protein	TCF7L1
+protein	TCF7L2
+protein	TGFB1
+protein	TGFBR1
+protein	TGFBR2
+protein	TIAM1
+protein	TP53
+protein	TRAF6
+protein	TSC1
+protein	TSC2
+protein	VAV1
+protein	DKK
+protein	CTNNB1
+protein	RTPK
+protein	GRB2
+abstract	Prosurvival
+abstract	Antisurvival
+family	AKT_f
+complex	AP1_c
+complex	CBPp300_c
+family	CFL_f
+family	CK1_f
+family	DKK_f
+family	DVL_f
+family	ERK_f
+family	FOXO_f
+family	FZD_f
+family	GAB_f
+family	GSK3_f
+family	ILR_f
+complex	ISGF3_c
+family	JAK_f
+family	JNK_f
+family	LRP_f
+family	MEK_f
+family	MMP_f
+family	MSK_f
+complex	mTORC1_c
+complex	mTORC2_c
+family	NFKB_f
+family	RAC_f
+family	RAF_f
+family	REL_f
+family	RSK_f
+family	RTPK_f
+family	S6K_f
+family	TAB_f
+family	TCF7_f
+family	TSC_f
+CSK	SRC	-a|
+PRKACA	CSK	-a>
+PRKCA	CHUK	-a>
+VAV1	RAC_f	-a>
+RSK_f	Prosurvival	-ap>
+RSK_f	SRF	-a>
+RSK_f	GSK3_f	-a|
+RSK_f	CCND1	-a>
+RSK_f	mTORC1_c	-a>
+RSK_f	BAD	-a|
+RSK_f	TSC_f	-a|
+RSK_f	FOS	-a>
+SKP2	DUSP1	-a|
+TGFB1	TGFBR2	-a>
+LIF	ILR_f	-a>
+ILR_f	SYK	-a>
+ILR_f	IRAK1	-a>
+ILR_f	SHC1	-a>
+ILR_f	JAK_f	-a>
+CREBBP	CBPp300_c	component>
+EP300	SKP2	-a>
+EP300	TP53	-a>
+EP300	CBPp300_c	component>
+EP300	SMAD7	-a>
+CCND1	SKP2	-a>
+CCND1	Prosurvival	-ap>
+NLK	FOXO_f	-a|
+NLK	TCF7_f	-a|
+TCF7_f	DKK	-t>
+TCF7_f	MYC	-a>
+TCF7_f	CCND1	-a>
+TCF7_f	EGR1	-a|
+LEF1	MMP_f	-a>
+EGR1	PTEN	-t>
+MMP_f	RTPK_f	-a>
+BTRC	CTNNB1	-a|
+CTNNB1	TCF7_f	-a>
+CTNNB1	LEF1	-a>
+SFRP1	FZD_f	-a|
+CFLAR	CASP8	-a|
+MSK_f	REL_f	-a>
+MSK_f	DUSP1	-a>
+MSK_f	NFKB_f	-a>
+FZD_f	DVL_f	-a>
+FZD_f	LRP_f	-a>
+DKK_f	LRP_f	-a|
+LRP_f	BTRC	-a|
+LRP_f	CK1_f	-a|
+LRP_f	AXIN1	-a|
+PIK3CA	mTORC2_c	-a>
+PIK3CA	PDPK1	-a>
+MAP3K8	MEK_f	-a>
+BAX	CYCS	-a>
+CYCS	CASP9	-a>
+S6K_f	GSK3_f	-a|
+S6K_f	mTORC2_c	-a|
+S6K_f	IRS1	-a|
+S6K_f	MDM2	-a|
+mTORC2_c	RAC_f	-a>
+mTORC2_c	AKT_f	-a>
+BAD	BCL2	-a|
+RHEB	RAF_f	-a|
+RHEB	mTORC1_c	-a>
+BCL2	CYCS	-a|
+AKT1S1	mTORC1_c	-a|
+TSC_f	mTORC2_c	-a>
+TSC_f	RHEB	-a|
+FOXO_f	Antisurvival	-ap>
+FOXO_f	RTPK	-t>
+CASP8	CASP3	-a>
+IRS1	PIK3CA	-a>
+CHUK	CREBBP	-a>
+CHUK	CTNNB1	-a>
+CHUK	NFKB_f	-a>
+GAB_f	PIK3CA	-a>
+GAB_f	PTPN11	-a>
+PTPN11	KRAS	-a>
+GRAP2	MAP2K4	-a>
+GRAP2	MAP2K7	-a>
+MAP3K11	MAP2K4	-a>
+MAP3K4	MAP2K4	-a>
+MAP2K4	MAPK14	-a>
+MAP2K4	JNK_f	-a>
+DUSP1	JNK_f	-a|
+DUSP1	MAPK14	-a|
+MAP3K5	MAP2K3	-a>
+MAP2K3	MAPK14	-a>
+DUSP6	ERK_f	-a|
+RAF_f	LIF	-a>
+RAF_f	MEK_f	-a>
+KRAS	PIK3CA	-a>
+KRAS	RAF_f	-a>
+RTPK_f	SRC	-a>
+RTPK_f	PPP1CA	-a|
+RTPK_f	SHC1	-a>
+SOS1	KRAS	-a>
+GRB2	GAB_f	-a>
+GRB2	SOS1	-a>
+PLCG1	PRKCA	-a>
+PLCG1	SOS1	-a>
+PTPN6	JAK_f	-a|
+SYK	VAV1	-a>
+SYK	PLCG1	-a>
+CASP9	CASP3	-a>
+PDPK1	PRKCD	-a>
+PDPK1	RSK_f	-a>
+PDPK1	S6K_f	-a>
+PDPK1	AKT_f	-a>
+PDPK1	PLK1	-a>
+ILK	AKT_f	-a>
+PAK1	JNK_f	-a>
+PAK1	ILK	-a>
+MEK_f	RTPK_f	-a|
+MEK_f	ERK_f	-a>
+mTORC1_c	DUSP6	-a>
+mTORC1_c	S6K_f	-a>
+mTORC1_c	STAT3	-a>
+PRKCD	LIMK2	-a|
+PRKCD	EP300	-a|
+PRKCD	TP53	-a>
+PRKCD	STAT3	-a>
+PRKCD	STAT1	-a>
+PLK1	MYC	-a>
+PLK1	IKBKB	-a|
+MAPKAPK2	PLK1	-a>
+MAPKAPK2	MDM2	-a>
+MAPKAPK2	SRF	-a>
+MAPKAPK2	PIAS1	-a>
+IRAK1	TRAF6	-a>
+IRAK1	STAT3	-a>
+ISGF3_c	Antisurvival	-ap>
+SOCS1	IRAK1	-a|
+SOCS1	JAK_f	-a|
+STAT3	CCND1	-a>
+STAT3	MMP_f	-a>
+STAT3	MYC	-a>
+STAT1	SOCS1	-t>
+STAT1	REL_f	-a|
+STAT1	ISGF3_c	component>
+STAT2	ISGF3_c	component>
+JAK_f	STAT3	-a>
+JAK_f	STAT1	-a>
+JAK_f	STAT2	-a>
+AXIN1	BTRC	-a>
+AXIN1	SMAD7	-a|
+MDM2	TP53	-a|
+CK1_f	FOXO_f	-a|
+CK1_f	BTRC	-a>
+ITCH	DVL_f	-a|
+ITCH	CFLAR	-a|
+ITCH	SMAD7	-a|
+ITCH	SMAD2	-a>
+TP53	CBPp300_c	-a|
+TP53	MDM2	-t>
+TP53	IKBKB	-a|
+TP53	BAX	-a>
+NFKB_f	PRKACA	-a>
+NFKB_f	TGFB1	-a>
+NFKB_f	MDM2	-t>
+IKBKB	MAP3K8	-a>
+IKBKB	TSC_f	-a|
+IKBKB	IRS1	-a|
+IKBKB	NFKB_f	-a>
+IKBKB	STAT1	-a>
+IKBKB	REL_f	-a>
+REL_f	NFKB_f	-a>
+PIAS1	TP53	-a>
+PIAS1	STAT1	-a|
+PIAS1	SMAD4	-a>
+AKT_f	EP300	-a>
+AKT_f	CFLAR	-a>
+AKT_f	GSK3_f	-a|
+AKT_f	MDM2	-a>
+AKT_f	FOXO_f	-a|
+AKT_f	BAD	-a|
+AKT_f	RAF_f	-a|
+AKT_f	MAP3K5	-a|
+AKT_f	CHUK	-a>
+AKT_f	AKT1S1	-a|
+AKT_f	TSC_f	-a|
+AKT_f	SKI	-a|
+AKT_f	SMAD3	-a|
+MAPK14	MAPKAPK2	-a>
+MAPK14	DUSP1	-t>
+MAPK14	GSK3_f	-a|
+MAPK14	TP53	-a>
+MAPK14	LRP_f	-a>
+MAPK14	MSK_f	-a>
+MAPK14	RTPK_f	-a|
+MAPK14	GRAP2	-a|
+MAPK14	STAT3	-a>
+MAPK14	TAB_f	-a|
+MAPK14	STAT1	-a>
+MAPK14	ATF2	-a>
+MAPK14	SMAD3	-a>
+CBPp300_c	PTEN	-a|
+CBPp300_c	REL_f	-a>
+CBPp300_c	SMAD2	-a>
+SKI	EP300	-a|
+SKI	SMAD5	-a|
+SKI	SMAD4	-a|
+SKI	SMAD3	-a|
+SKI	SMAD2	-a|
+SKI	SMAD1	-a|
+PPM1A	AXIN1	-a|
+PPM1A	IKBKB	-a|
+PPM1A	SMAD3	-a|
+PPM1A	SMAD2	-a|
+PPM1A	SMAD1	-a|
+ERK_f	SKP2	-a>
+ERK_f	DUSP1	-t>
+ERK_f	GSK3_f	-a|
+ERK_f	TSC_f	-a|
+ERK_f	LRP_f	-a>
+ERK_f	RSK_f	-a>
+ERK_f	MSK_f	-a>
+ERK_f	IRS1	-a|
+ERK_f	GAB_f	-a|
+ERK_f	RAF_f	-a|
+ERK_f	MEK_f	-a|
+ERK_f	SOS1	-a|
+ERK_f	DUSP6	-a>
+ERK_f	STAT3	-a>
+ERK_f	FOS	-a>
+ERK_f	ATF2	-a>
+ERK_f	SMAD4	-a>
+ERK_f	SMAD3	-a|
+ERK_f	SMAD2	-a>
+ERK_f	SMAD1	-a|
+GSK3_f	AXIN1	-a>
+GSK3_f	MYC	-a|
+GSK3_f	TSC_f	-a>
+GSK3_f	BTRC	-a>
+GSK3_f	PTEN	-a|
+GSK3_f	JUN	-a|
+GSK3_f	SMAD3	-a|
+GSK3_f	SMAD1	-a|
+PPP1CA	STAT3	-a|
+PPP1CA	ERK_f	-a|
+PPP1CA	CASP9	-a>
+PPP1CA	AKT_f	-a|
+PPP1CA	MDM2	-a>
+PPP1CA	AXIN1	-a|
+TAB_f	MAP3K7	-a>
+MAP3K7	NLK	-a>
+MAP3K7	IKBKB	-a>
+MAP3K7	MAP2K7	-a>
+MAP3K7	MAP2K4	-a>
+MAP3K7	MAP2K3	-a>
+SMAD4	SMAD7	-t>
+SMAD4	SMAD6	-t>
+SMAD4	AP1_c	component>
+SMAD1	DVL_f	-a>
+SMAD1	SMAD4	-a>
+SMAD5	SMAD4	-a>
+BMPR2	ACVR1	-a>
+ACVR1	SMAD1	-a>
+ACVR1	SMAD3	-a>
+ACVR1	SMAD2	-a>
+ACVR1	SMAD5	-a>
+SRC	PTEN	-a|
+SRC	SHC1	-a>
+SRC	PTPN6	-a>
+SRC	CDC42	-a>
+SRC	STAT3	-a>
+SRC	STAT1	-a>
+SMAD3	SMAD7	-t>
+SMAD3	SMAD6	-t>
+SMAD3	AP1_c	component>
+SMAD3	SMAD4	-a>
+SHC1	GRB2	-a>
+SMAD6	SMAD3	-a|
+SMAD6	SMAD4	-a|
+SMAD6	SMAD1	-a|
+SMAD6	TGFBR1	-a|
+TRAF6	CHUK	-a>
+TRAF6	TAB_f	-a>
+SMAD7	SMAD4	-a|
+SMAD7	SMURF1	-a>
+SMAD7	SMURF2	-a>
+SMAD7	SMAD3	-a|
+SMAD7	PPP1CA	-a>
+SMAD7	TGFBR1	-a|
+SMURF1	SMAD7	-a>
+SMURF1	RHOA	-a|
+SMURF1	BMPR2	-a|
+SMURF1	SMAD4	-a|
+SMURF1	SMAD1	-a|
+SMURF1	TGFBR2	-a|
+SMURF1	TGFBR1	-a|
+SMURF2	BMPR2	-a|
+SMURF2	SMAD7	-a|
+SMURF2	SMAD5	-a|
+SMURF2	SMAD2	-a|
+SMURF2	TGFBR2	-a|
+SMURF2	TGFBR1	-a|
+SMAD2	SMAD7	-t>
+SMAD2	SMAD6	-t>
+SMAD2	SMAD4	-a>
+TGFBR2	PARD6A	-a>
+TGFBR2	TGFBR1	-a>
+TGFBR1	PARD6A	-a>
+TGFBR1	SMAD3	-a>
+TGFBR1	SHC1	-a>
+TGFBR1	TRAF6	-a>
+TGFBR1	SMAD2	-a>
+DVL_f	GSK3_f	-a|
+DVL_f	RAC_f	-a>
+DVL_f	DAAM1	-a>
+DAAM1	RHOA	-a>
+PARD6A	RHOA	-a|
+AP1_c	ILR_f	-a>
+MYC	DKK	-t|
+MYC	SFRP1	-t|
+MYC	Prosurvival	-ap>
+JUN	TGFB1	-a>
+JUN	AP1_c	component>
+ATF2	AP1_c	component>
+FOS	PRKACA	-a>
+FOS	TGFB1	-a>
+FOS	AP1_c	component>
+SRF	FOS	-a>
+PTEN	SHC1	-a|
+PTEN	PDPK1	-a|
+PTEN	PPM1A	-a>
+CFL_f	SRF	-a>
+LIMK1	CFL_f	-a>
+LIMK2	CFL_f	-a>
+CDC42	PAK1	-a>
+ARHGAP24	CDC42	-a|
+ARHGAP24	RAC_f	-a|
+RAC_f	MAP3K11	-a>
+RAC_f	MAP3K4	-a>
+RAC_f	PAK1	-a>
+RAC_f	LIMK1	-a>
+RAC_f	RHOA	-a|
+TIAM1	RAC_f	-a>
+RHOA	ROCK1	-a>
+RND3	RHOA	-a|
+CASP3	Antisurvival	-ap>
+CASP3	PRKCD	-a>
+CASP3	ROCK1	-a>
+JNK_f	LRP_f	-a>
+JNK_f	ITCH	-a>
+JNK_f	STAT3	-a>
+JNK_f	SMAD3	-a>
+JNK_f	JUN	-a>
+JNK_f	ATF2	-a>
+MAP2K7	JNK_f	-a>
+MAPK8IP3	MAP2K7	-a>
+ROCK1	PTEN	-a>
+ROCK1	LIMK1	-a>
+ROCK1	LIMK2	-a>
+ROCK1	ARHGAP24	-a>
+ROCK1	TIAM1	-a|
+ROCK1	RND3	-a>
+ROCK1	MAPK8IP3	-a>
+AKT1	AKT_f	member>
+AKT2	AKT_f	member>
+AKT3	AKT_f	member>
+CFL1	CFL_f	member>
+CFL2	CFL_f	member>
+CSNK1A1	CK1_f	member>
+CSNK1D	CK1_f	member>
+CSNK1E	CK1_f	member>
+DKK1	DKK_f	member>
+DKK2	DKK_f	member>
+DKK3	DKK_f	member>
+DKK4	DKK_f	member>
+DVL1	DVL_f	member>
+DVL2	DVL_f	member>
+DVL3	DVL_f	member>
+MAPK3	ERK_f	member>
+MAPK1	ERK_f	member>
+FOXO1	FOXO_f	member>
+FOXO3	FOXO_f	member>
+FOXO4	FOXO_f	member>
+FZD1	FZD_f	member>
+FZD2	FZD_f	member>
+FZD3	FZD_f	member>
+FZD4	FZD_f	member>
+FZD5	FZD_f	member>
+FZD6	FZD_f	member>
+FZD7	FZD_f	member>
+FZD8	FZD_f	member>
+FZD9	FZD_f	member>
+FZD10	FZD_f	member>
+GAB1	GAB_f	member>
+GAB2	GAB_f	member>
+GSK3A	GSK3_f	member>
+GSK3B	GSK3_f	member>
+LIFR	ILR_f	member>
+IL6ST	ILR_f	member>
+IL6R	ILR_f	member>
+JAK1	JAK_f	member>
+JAK2	JAK_f	member>
+MAPK8	JNK_f	member>
+MAPK9	JNK_f	member>
+LRP5	LRP_f	member>
+LRP6	LRP_f	member>
+MAP2K1	MEK_f	member>
+MAP2K2	MEK_f	member>
+MMP2	MMP_f	member>
+MMP7	MMP_f	member>
+MMP9	MMP_f	member>
+RPS6KA4	MSK_f	member>
+RPS6KA5	MSK_f	member>
+MTOR	mTORC1_c	component>
+RPTOR	mTORC1_c	component>
+MLST8	mTORC1_c	component>
+MTOR	mTORC2_c	component>
+RICTOR	mTORC2_c	component>
+MLST8	mTORC2_c	component>
+NFKB1	NFKB_f	member>
+NFKB2	NFKB_f	member>
+RAC1	RAC_f	member>
+RAC2	RAC_f	member>
+RAC3	RAC_f	member>
+ARAF	RAF_f	member>
+BRAF	RAF_f	member>
+RAF1	RAF_f	member>
+RELA	REL_f	member>
+RELB	REL_f	member>
+REL	REL_f	member>
+RPS6KA1	RSK_f	member>
+RPS6KA2	RSK_f	member>
+RPS6KA3	RSK_f	member>
+EGFR	RTPK_f	member>
+ERBB2	RTPK_f	member>
+ERBB3	RTPK_f	member>
+ERBB4	RTPK_f	member>
+IGF1R	RTPK_f	member>
+PDGFRA	RTPK_f	member>
+PDGFRB	RTPK_f	member>
+CSF1R	RTPK_f	member>
+KIT	RTPK_f	member>
+FLT3	RTPK_f	member>
+FGFR1	RTPK_f	member>
+FGFR2	RTPK_f	member>
+FGFR3	RTPK_f	member>
+FGFR4	RTPK_f	member>
+FLT1	RTPK_f	member>
+FLT4	RTPK_f	member>
+KDR	RTPK_f	member>
+MET	RTPK_f	member>
+RPS6KB1	S6K_f	member>
+RPS6KB2	S6K_f	member>
+TAB1	TAB_f	member>
+TAB2	TAB_f	member>
+TCF7	TCF7_f	member>
+TCF7L1	TCF7_f	member>
+TCF7L2	TCF7_f	member>
+TSC1	TSC_f	member>
+TSC2	TSC_f	member>

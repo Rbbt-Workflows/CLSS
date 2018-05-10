@@ -1,0 +1,14 @@
+- if job 
+  .job_control
+    = workflow_partial('job_result/job_control', workflow, task, locals)
+
+%dl
+  %dt Matches
+  %dd= job.info[:matches]["MATCH"]
+  %dt Non Matches
+  %dd= job.info[:matches]["NO"]
+  %dt Partial
+  %dd= job.info[:matches]["PARTIAL"]
+
+= table do
+  - result

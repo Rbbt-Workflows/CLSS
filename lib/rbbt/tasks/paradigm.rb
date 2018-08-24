@@ -183,7 +183,7 @@ module CLSS
       {:jobname => cell_line, :inputs => options.merge(:cell_line => cell_line)}
     end.compact
   end
-  task :all_steady_states => :tsv do
+  task :all_steady_states_expr => :tsv do
     tsv = nil
     TSV.traverse dependencies, :bar => self.progress_bar("Joining steady state files") do |dep|
       next if dep.error?
@@ -199,8 +199,8 @@ module CLSS
     tsv
   end
 
-  dep :all_steady_states
-  task :all_steady_states_meta => :tsv do 
+  dep :all_steady_states_expr
+  task :all_steady_states_consensus_mayority_expr => :tsv do 
     tsv = step(:all_steady_states).load
 
     tsv.add_field "Majority vote" do |gene,values|
@@ -219,7 +219,7 @@ module CLSS
       {:jobname => cell_line, :inputs => options.merge(:cell_line => cell_line)}
     end.compact
   end
-  task :all_steady_states_viper => :tsv do
+  task :all_steady_states => :tsv do
     tsv = nil
     dependencies.each do |dep|
       next if dep.error?
@@ -235,9 +235,9 @@ module CLSS
     tsv
   end
 
-  dep :all_steady_states_viper
-  task :all_steady_states_meta_viper => :tsv do 
-    tsv = step(:all_steady_states_viper).load
+  dep :all_steady_states
+  task :all_steady_states_consensus_mayority => :tsv do 
+    tsv = step(:all_steady_states).load
 
     tsv.add_field "Majority vote" do |gene,values|
       num = values.select{|v| v != "-"}.length

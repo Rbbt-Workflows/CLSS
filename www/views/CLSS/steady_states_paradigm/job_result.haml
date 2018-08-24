@@ -5,7 +5,7 @@
 - ac = ActionCard.new do 
   - input :genes, :string, "Coma separated list of genes"
   - input :activations, :select, "Activations", "paradigm", :select_options => %w(paradigm viper literature)
-  - input :pathway, :select, "Pathway", "CASCADE", :select_options => %w(CASCADE EXT)
+  - input :pathway, :select, "Pathway", "CASCADE", :select_options => %w(CASCADE EXT FNL)
 
 =  action_card_render ac do
   - genes ||= "CTNNB1"
@@ -52,7 +52,14 @@
   - nodes = []
   - associations = []
   - association_type = {}
+  - if pathway == 'CASCADE'
+    - p = st_pathway
+  - elsif pathway == 'EXT'
+    - p = st_tf_pathway
+  - elsif pathway == 'FNL'
+    - p = job.step(:pairs).read
   - p = pathway == 'CASCADE' ? st_pathway : st_tf_pathway
+
   - p.split("\n").each do |line|
     - parts = line.split("\t")
     - next unless genes.empty? or (parts & genes).any?

@@ -5,6 +5,8 @@ Workflow.require_workflow "ROMA"
 
 module CLSS
 
+  ERROR_CELL_LINES= %w()
+
   dep FNL, :regulon, :jobname => "Default"
   input :st_pathway, :text, "Signal transduction pathway in Paradigm", nil, :required => true, :stream => false
   task :st_tf_pathway => :text do |pth|
@@ -175,12 +177,49 @@ module CLSS
     dumper
   end
 
-  dep :steady_states_paradigm_expr, :cell_line => :placeholder, :compute => [:bootstrap, 3, :canfail] do |jobname, options|
+  dep :steady_states_paradigm_expr, :cell_line => :placeholder, :compute => [:bootstrap, nil, :canfail] do |jobname, options|
     CCLE.cell_lines.keys.collect do |cell_line|
+      next if ERROR_CELL_LINES.include? cell_line
       {:jobname => cell_line, :inputs => options.merge(:cell_line => cell_line)}
-    end
+    end.compact
   end
   task :all_steady_states => :tsv do
+    tsv = nil
+    TSV.traverse dependencies, :bar => self.progress_bar("Joining steady state files") do |dep|
+      next if dep.error?
+      cell_line = dep.recursive_inputs[:cell_line]
+      this = dep.load
+      this.fields = [cell_line]
+      if tsv.nil?
+        tsv = this
+      else
+        tsv.attach this
+      end
+    end
+    tsv
+  end
+
+  dep :all_steady_states
+  task :all_steady_states_meta => :tsv do 
+    tsv = step(:all_steady_states).load
+
+    tsv.add_field "Majority vote" do |gene,values|
+      num = values.select{|v| v != "-"}.length
+      (values.select{|v| v.to_i == 1}.length > num.to_f / 2) ? 1 : 0
+    end
+
+    tsv = tsv.slice("Majority vote").to_single
+    tsv.fields = ["Activity"]
+    tsv
+  end
+
+  dep :steady_states_paradigm, :cell_line => :placeholder, :compute => [:bootstrap, nil, :canfail] do |jobname, options|
+    CCLE.cell_lines.keys.collect do |cell_line|
+      next if ERROR_CELL_LINES.include? cell_line
+      {:jobname => cell_line, :inputs => options.merge(:cell_line => cell_line)}
+    end.compact
+  end
+  task :all_steady_states_viper => :tsv do
     tsv = nil
     dependencies.each do |dep|
       next if dep.error?
@@ -193,6 +232,20 @@ module CLSS
         tsv.attach this
       end
     end
+    tsv
+  end
+
+  dep :all_steady_states_viper
+  task :all_steady_states_meta_viper => :tsv do 
+    tsv = step(:all_steady_states_viper).load
+
+    tsv.add_field "Majority vote" do |gene,values|
+      num = values.select{|v| v != "-"}.length
+      (values.select{|v| v.to_i == 1}.length > num.to_f / 2) ? 1 : 0
+    end
+
+    tsv = tsv.slice("Majority vote").to_single
+    tsv.fields = ["Activity"]
     tsv
   end
 

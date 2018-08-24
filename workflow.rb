@@ -82,7 +82,6 @@ module CLSS
     raise ParameterException, "Cell line not found: " << cell_line if ccle_cl.nil?
     log :cell_line, "Using cell_line #{ccle_cl} (#{cell_line})"
 
-
     tsv = begin
             CCLE.gene_CNV.tsv(:type => :list, :fields => [ccle_cl]).change_key("Associated Gene Name", :identifiers  => Organism.identifiers(CCLE.organism)).transpose
           rescue

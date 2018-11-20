@@ -1,5 +1,5 @@
 Workflow.require_workflow "Paradigm"
-Workflow.require_workflow "FNL"
+Workflow.require_workflow "ExTRI"
 Workflow.require_workflow "Viper"
 Workflow.require_workflow "ROMA"
 
@@ -7,7 +7,7 @@ module CLSS
 
   ERROR_CELL_LINES= %w()
 
-  dep FNL, :regulon, :jobname => "Default"
+  dep ExTRI, :regulon, :jobname => "Default"
   input :st_pathway, :text, "Signal transduction pathway in Paradigm", nil, :required => true, :stream => false
   task :st_tf_pathway => :text do |pth|
     pth = pth.read if IO === pth or File === pth
@@ -64,7 +64,7 @@ module CLSS
     new_lines * "\n" + "\n"
   end
 
-  dep FNL, :regulon, :compute => :produce, :jobname => "Default"
+  dep ExTRI, :regulon, :compute => :produce, :jobname => "Default"
   task :regulon_modules => :text do
     TSV.traverse step(:regulon), :into => :stream do |tf, values|
       tgs = Misc.zip_fields(values).collect{|tf,s|s = 1 if (s.nil? or s.empty?); "#{tf}[#{s}]" }

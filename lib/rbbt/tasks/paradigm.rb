@@ -201,7 +201,7 @@ module CLSS
 
   dep :all_steady_states_expr
   task :all_steady_states_consensus_mayority_expr => :tsv do 
-    tsv = step(:all_steady_states).load
+    tsv = step(:all_steady_states_expr).load
 
     tsv.add_field "Majority vote" do |gene,values|
       num = values.select{|v| v != "-"}.length

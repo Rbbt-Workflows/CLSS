@@ -1,4 +1,4 @@
-CLSS=/$PWD filter="*.rb *.rake Rakefile *.rdoc *.R *.sh *.js *.haml *.sass *.txt *.conf" {
+CLSS=/$PWD filter="*.rb *.rake Rakefile *.rdoc *.R *.sh *.js *.haml *.sass *.txt *.conf *.tsv" {
  workflow.rb
  workflow.md
  bin=bin filter="*"{
@@ -10,9 +10,12 @@ CLSS=/$PWD filter="*.rb *.rake Rakefile *.rdoc *.R *.sh *.js *.haml *.sass *.txt
     graph.rb
    }
    tasks=tasks{
-    COREAD.rb
-    expression.rb
+    data_sources.rb
+    tf_activity.rb
     paradigm.rb
+    paradigm_new.rb
+    expression.rb
+    COREAD.rb
    }
   }
  }
@@ -36,4 +39,8 @@ CLSS=/$PWD filter="*.rb *.rake Rakefile *.rdoc *.R *.sh *.js *.haml *.sass *.txt
    }
   }
  }
+ share=share{
+  MCLP_RPPA_annotation_20170222.tsv
+ }
+
 }

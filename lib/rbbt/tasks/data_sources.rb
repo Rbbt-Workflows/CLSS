@@ -137,18 +137,26 @@ module CLSS
   end
 
   input :cell_line, :string, "Cell line name"
-  task :abundance => :tsv do |cell_line|
+  input :binarize, :boolean, "Binarize RPPA values", true
+  task :abundance => :tsv do |cell_line,binarize|
     mclp_cl = mclp_cell_line(cell_line)
     raise ParameterException, "Cell line not found: " << cell_line if mclp_cl.nil?
 
     log :cell_line, "Using cell_line #{mclp_cl} (#{cell_line})"
-    tsv = matrix_activity(MCLP.RPPA.find, mclp_cl)
+    if binarize
+      tsv = matrix_activity(MCLP.RPPA.find, mclp_cl)
+    else
+      tsv = MCLP.RPPA.tsv
+      tsv = tsv.slice(mclp_cl).transpose
+      tsv.key_field = "id"
+      tsv
+    end
 
     annotations = Rbbt.share["MCLP_RPPA_annotation_20170222.tsv"].tsv :fields => ["Genes", "Correlation"], :type => :double
 
     abs = tsv.fields 
     all_genes = annotations.column("Genes").values.flatten.compact.reject{|g| g.empty? }.sort.uniq
-    activity = TSV.setup({}, :key_field => "id", :fields => all_genes)
+    activity = TSV.setup({}, :key_field => "id", :fields => all_genes, :type => :double)
     tsv.each do |sample,values|
       res = [nil] * all_genes.length
       values.zip(abs).each do |value,ab|
@@ -160,28 +168,36 @@ module CLSS
           res[all_genes.index(gene)] = value
         end
       end
-      activity[sample] = res
+      activity.zip_new sample, res
     end
 
     activity[cell_line] = activity[mclp_cl]
     activity.delete mclp_cl unless mclp_cl == cell_line
     activity.key_field = "id"
-    activity
+    activity.to_list{|f| f.any? ? Misc.mean(f) : nil }
   end
 
   input :cell_line, :string, "Cell line name"
-  task :activity => :tsv do |cell_line|
+  input :binarize, :boolean, "Binarize RPPA values", true
+  task :activity => :tsv do |cell_line,binarize|
     mclp_cl = mclp_cell_line(cell_line)
     raise ParameterException, "Cell line not found: " << cell_line if mclp_cl.nil?
 
     log :cell_line, "Using cell_line #{mclp_cl} (#{cell_line})"
-    tsv = matrix_activity(MCLP.RPPA.find, mclp_cl)
+    if binarize
+      tsv = matrix_activity(MCLP.RPPA.find, mclp_cl)
+    else
+      tsv = MCLP.RPPA.tsv
+      tsv = tsv.slice(mclp_cl).transpose
+      tsv.key_field = "id"
+      tsv
+    end
 
     annotations = Rbbt.share["MCLP_RPPA_annotation_20170222.tsv"].tsv :fields => ["Genes", "Correlation"], :type => :double
 
     abs = tsv.fields 
     all_genes = annotations.column("Genes").values.flatten.compact.reject{|g| g.empty? }.sort.uniq
-    activity = TSV.setup({}, :key_field => "id", :fields => all_genes)
+    activity = TSV.setup({}, :key_field => "id", :fields => all_genes, :type => :double)
     tsv.each do |sample,values|
       res = [nil] * all_genes.length
       values.zip(abs).each do |value,ab|
@@ -192,13 +208,13 @@ module CLSS
         v = value.to_f * correlation
         res[all_genes.index(gene)] = v
       end
-      activity[sample] = res
+      activity.zip_new sample, res
     end
 
     activity[cell_line] = activity[mclp_cl]
     activity.delete mclp_cl unless mclp_cl == cell_line
     activity.key_field = "id"
-    activity
+    activity.to_list{|f| f.any? ? Misc.mean(f) : nil }
   end
 
   input :cell_line, :string, "Cell line name"

@@ -113,4 +113,52 @@ Here we allow the different types of observations to be selected
     end
     tsv
   end
+  
+  dep :activity, :cell_line => :placeholder, :compute => [:bootstrap, nil, :canfail] do |jobname, options|
+    cell_lines = MCLP.RPPA.tsv.fields
+    cell_lines.collect do |cell_line|
+      {:jobname => cell_line.gsub(' ','_'), :inputs => options.merge(:cell_line => cell_line)}
+    end.compact
+  end
+  task :all_activity => :tsv do
+    tsv = nil
+    TSV.traverse dependencies, :bar => self.progress_bar("Joining activity files") do |dep|
+      next if dep.error?
+      cell_line = dep.recursive_inputs[:cell_line]
+      this = dep.load.transpose
+      this.fields = [cell_line]
+      if tsv.nil?
+        tsv = this
+      else
+        tsv.attach this
+      end
+    end
+    good_genes = tsv.keys.select{|k| tsv[k].flatten.reject{|e| e.nil? || e.empty?}.any? }
+    tsv.key_field = "Gene"
+    tsv.select(good_genes)
+  end
+
+  dep :abundance, :cell_line => :placeholder, :compute => [:bootstrap, nil, :canfail] do |jobname, options|
+    cell_lines = MCLP.RPPA.tsv.fields
+    cell_lines.collect do |cell_line|
+      {:jobname => cell_line.gsub(' ','_'), :inputs => options.merge(:cell_line => cell_line)}
+    end.compact
+  end
+  task :all_abundance => :tsv do
+    tsv = nil
+    TSV.traverse dependencies, :bar => self.progress_bar("Joining activity files") do |dep|
+      next if dep.error?
+      cell_line = dep.recursive_inputs[:cell_line]
+      this = dep.load.transpose
+      this.fields = [cell_line]
+      if tsv.nil?
+        tsv = this
+      else
+        tsv.attach this
+      end
+    end
+    good_genes = tsv.keys.select{|k| tsv[k].flatten.reject{|e| e.nil? || e.empty?}.any? }
+    tsv.key_field = "Gene"
+    tsv.select(good_genes)
+  end
 end

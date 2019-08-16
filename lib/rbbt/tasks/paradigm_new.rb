@@ -26,8 +26,9 @@ module CLSS
       step(:st_tf_pathway).load
     else
       pth = self.recursive_inputs[:st_pathway]
+      raise RbbtException, "No st_pathway" if pth.nil? or pth.empty?
       pth = pth.read if IO === pth or File === pth
-      pth = Misc.is_filename?(pth)? Open.read(pth) : pth
+      pt = Misc.is_filename?(pth)? Open.read(pth) : pth
     end
   end
 

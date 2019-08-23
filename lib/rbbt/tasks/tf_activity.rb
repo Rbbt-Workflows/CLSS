@@ -98,7 +98,7 @@ module CLSS
 
     require 'rbbt/sources/organism'
     require 'rbbt/sources/signor'
-    signor = Signor.protein_protein.tsv
+    signor = Signor.protein_protein.produce.tsv
     signor.identifiers = Organism.identifiers(Signor.organism)
     signor.key_field = "UniProt/SwissProt Accession"
     signor = signor.change_key "Associated Gene Name"

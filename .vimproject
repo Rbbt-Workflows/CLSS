@@ -33,6 +33,9 @@ CLSS=/$PWD filter="*.rb *.rake Rakefile *.rdoc *.R *.sh *.js *.haml *.sass *.txt
     steady_states_paradigm=steady_states_paradigm{
      job_result.haml
     }
+    paradigm_ss=paradigm_ss{
+     job_result.haml
+    }
     compare_coread_paradigm=compare_coread_paradigm{
      job_result.haml
     }

@@ -8,7 +8,21 @@ module CLSS
   end
   task :activity_general => :tsv do |use_tf_activity|
     tsv = step(:activity).load.transpose.to_list
-    tsv.annotate(tsv.merge(step(:cl_tf_activity).load)) if use_tf_activity
+    if use_tf_activity
+      tf = step(:cl_tf_activity).load.to_list
+      tf.process tf.fields.first do |v|
+        case
+        when v.to_f  < -1
+          -1
+        when v.to_f  > 1
+          1
+        else
+          0
+        end
+      end
+                    
+      tsv = tsv.annotate(tsv.merge(tf))
+    end
     tsv.transpose
   end
 
@@ -26,12 +40,15 @@ module CLSS
       step(:st_tf_pathway).load
     else
       pth = self.recursive_inputs[:st_pathway]
+      raise RbbtException, "No st_pathway" if pth.nil? or pth.empty?
       pth = pth.read if IO === pth or File === pth
-      pth = Misc.is_filename?(pth)? Open.read(pth) : pth
+      pt = Misc.is_filename?(pth)? Open.read(pth) : pth
     end
   end
 
   input :binarize, :boolean, "Binarize output", false
+  input :binarize_threshold, :float, "Binarization threshold", 0
+  input :binarize_method, :select, "Binarization method", :absolute, :select_options => %w(absolute percentile)
   input :use_genome, :boolean, "Use genomic data", false
   input :use_mRNA, :boolean, "Use genomic data", true
   input :use_abundance, :boolean, "Use protein abundance data", true
@@ -63,19 +80,31 @@ New version of the steady_states_paradigm
 
 Here we allow the different types of observations to be selected
   EOF
-  task :paradigm_ss => :tsv do |binarize|
+  task :paradigm_ss => :tsv do |binarize,bthreshold,bmethod|
     dumper = TSV::Dumper.new :key_field => "Gene", :fields => %w(Activity), :type => :single, :cast => (binarize ? nil : :to_f)
     dumper.init
+    if binarize and bmethod == 'percentile'
+      values = []
+      TSV.traverse step(:analysis_tsv) do |elem, value|
+        value = value.first if Array === value
+        value = value.to_f unless value.nil?
+        values << value
+      end
+      l = values.length
+      pos = (l * bthreshold / 100).floor
+      bthreshold = values.sort[pos]
+    end
     TSV.traverse step(:analysis_tsv), :into => dumper do |elem, value|
       elem = elem.first if Array === elem
       value = value.first if Array === value
+      value = value.to_f unless value.nil?
       if binarize
         activity = case
-                   when value == 0
+                   when value == bthreshold
                      "-"
-                   when value < 0
+                   when value < bthreshold
                      "0"
-                   when value > 0
+                   when value > bthreshold
                      "1"
                    end
       else

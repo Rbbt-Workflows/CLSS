@@ -48,7 +48,7 @@ module CLSS
 
   input :binarize, :boolean, "Binarize output", false
   input :binarize_threshold, :float, "Binarization threshold", 0
-  input :binarize_method, :select, "Binarization method", :absolute, :select_options => %w(absolute percentile)
+  input :binarize_method, :select, "Binarization method", :absolute, :select_options => %w(absolute percentile tails)
   input :use_genome, :boolean, "Use genomic data", false
   input :use_mRNA, :boolean, "Use genomic data", true
   input :use_abundance, :boolean, "Use protein abundance data", true
@@ -83,6 +83,7 @@ Here we allow the different types of observations to be selected
   task :paradigm_ss => :tsv do |binarize,bthreshold,bmethod|
     dumper = TSV::Dumper.new :key_field => "Gene", :fields => %w(Activity), :type => :single, :cast => (binarize ? nil : :to_f)
     dumper.init
+
     if binarize and bmethod == 'percentile'
       values = []
       TSV.traverse step(:analysis_tsv) do |elem, value|
@@ -94,18 +95,36 @@ Here we allow the different types of observations to be selected
       pos = (l * bthreshold / 100).floor
       bthreshold = values.sort[pos]
     end
+
+    if binarize and bmethod == 'tails'
+      values = []
+      TSV.traverse step(:analysis_tsv) do |elem, value|
+        value = value.first if Array === value
+        value = value.to_f unless value.nil?
+        values << value
+      end
+      orig = bthreshold
+      l = values.length
+      pos = (l * orig / 100).floor
+      bthreshold = values.sort[pos]
+
+      pos = (l * (1 - orig) / 100).floor
+      bthreshold_top = values.sort[pos]
+    end
+
+    bthreshold_top ||= bthreshold
     TSV.traverse step(:analysis_tsv), :into => dumper do |elem, value|
       elem = elem.first if Array === elem
       value = value.first if Array === value
       value = value.to_f unless value.nil?
       if binarize
         activity = case
-                   when value == bthreshold
-                     "-"
                    when value < bthreshold
                      "0"
-                   when value > bthreshold
+                   when value > bthreshold_top
                      "1"
+                   else
+                     "-"
                    end
       else
         activity = value
